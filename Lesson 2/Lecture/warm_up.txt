@@ -1,0 +1,24 @@
+Warm Up Exercise 1: Area of a circle
+Create a program that can report the area of a circle with a given radius
+- You must create a function called area_of_circle() that takes radius as a parameter
+- You must import math and use the global variable math.pi in your solution
+- Be sure to check your work: https://www.calculatorsoup.com/calculators/geometry-solids/cylinder.php
+
+Bonus Objectives:
+- Use input() to request radius from the user
+- You must print the area of the circle to the nearest 2 decimal points using format() (ask for help on this one)
+- Information on how to use .format() can be found here if I'm busy https://www.w3schools.com/python/ref_string_format.asp
+- Can you calculate the area of a cylinder too? (Hint: You can re-use area_of_circle for half of the equation)
+
+Warm Up Exercise 2: Rock Paper Scissors
+Create a python program that you can play rock, paper, scissors against. Requirements are as follows:
+- The program must prompt the user to provide input equating to a rock, paper, or scissors command
+- The program must randomly select rock, paper, or scissors (use random.randint())
+- The program must tell the player who won
+- You must define at least one function, use random.randint(), and "if" statements for this assignment
+
+Bonus Objectives:
+- You can play repeatedly until you tell the program to 'quit'
+- Use a list for AI Rock, Paper, and Scissors selection
+- Give the AI some "weakness". For example, it can never select the same option twice, it has a tell, or it perfers some option
+- Have the program track your win/loss record

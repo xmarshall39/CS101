@@ -1,0 +1,75 @@
+Lesson 3: Classes, Objects, Member functions, Casting
+Recap:
+- Last week we talked about how the computer uses its memory to make your code possible
+- And we formally introduced a new data type called a list
+
+Today:
+- We're gonna talk about a design principle that drives Python as a programming language and essentially all others you'll ever use
+- That paradigm is called "Object Oriented" programming
+- Object oriented programming is all about creating modular blocks of code, typically called a Class 
+  that can be used again and again to create individual Objects
+- A class is a data type
+- A class contains data and functions
+- A list is a great example of a class
+    - The data is what you fill the list with
+    - the functions are things like append(), sort(), remove(), reverse() that can be called on the List Object
+    - These functions are called "member functions" since they're members of the class
+- List refers to a class and, like a function, they're defined in your code but don't do anything immidiately
+- Every instance of a class is called an object
+- Here's another example of a class:
+
+class Dog: # This is a class definition
+    name = ""
+    breed_name = ""
+    color = ""
+    height = 0
+    weight = 0
+
+    def feed(servings): # MEMBER FUNCTION
+        weight += servings * 0.01
+
+    def print_dawg(): # MEMBER FUNCTION
+        print(f"{name} is a {color} {breed_name} who's {height}cm tall and {weight}kg")
+        if is_fat():
+            print(f"{name} is fat now...")
+            
+    def is_fat(): # MEMBER FUNCTION
+        return weight / height > 2
+
+
+myDog = Dog() # This is a class instance
+myDog.name = "Ezra"
+myDog.breed_name = "doberman"
+myDog.color = "black"
+myDog.height = 100
+myDog.weight = 40
+
+someOtherDog = Dog() # This is another class instance
+someOtherDog.name = "Pitbull The Rapper"
+someOtherDog.breed_name = "pitbull"
+someOtherDog.color = "white"
+someOtherDog.height = 30
+someOtherDog.weight = 35
+
+myDog.print_dawg()
+someOtherDog.print_dawg()
+
+while input("Feed Dog? (y/n)\n") == "y":
+    servings = int(input("How Many Servings?))
+    myDog.feed(servings)
+    myDog.print_dawg()
+
+
+Casting: An Aside
+- When we convert an object from one data type to another, we call that process casting.
+- You've likely done it before, here's an example
+
+response = input("Tell me a number")
+num = int(response)
+print(5 + num)
+
+- The input function returns a string, but we want a number we can do math on
+- so, on the second line, we cast response from a string to an integer and store it in num
+- then on the last line, we can do the math
+- We can make this shorter and get the same result:
+print(5 + int(input("Tell Me a Number)))

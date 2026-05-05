@@ -1,0 +1,27 @@
+Lesson 2: Memory, Lists, and Loops
+Recap:
+- Last week we talked about the fundamental features that make up a programming language
+- Keywords, functions, operators, variables, etc
+- And we did some work modifying data and displaying it to the user
+    - Arithmetic operations, variable (re)assignment, string manipulation
+- Today, we'll talk about how the computer actually performs the data manipulations we did before
+- The most basic way of using computer memory is by creating a variable
+- Because variables need to be used, potentially, across the entire lifetime of a program, they must be remembered somewhere
+- This is what your computer's RAM is for. It's a physical registry used to lookup and store data
+- Every unique location in on your RAM has a unique address
+- Memory addresses are numbered in order from 0 to like a kuzillion
+- Your python program is provided a slice of that by your operating system (and gets more slices as needed)
+  - It's like your program's a slumlord who's bought up entire city blocks :)
+- When your OS provides RAM space to a program, that ram is allocated with two distinct regions: the Stack and the Heap
+- The Stack is the simpler of the two brothers, and therefore handles simpler stuff
+    - So, if we have a line of code that reads: "x = 5" that variable gets allocated on the stack
+    - This actually relates to Scope, which we talked about last time
+    - When something goes out of scope, it's being cleared from stack memory
+    - It's managed automatically by your program in ALL languages
+    - Most of the memory your compiler KNOWS it needs will end up allocated on the stack
+
+- The Heap is the more complex brother. It's designed to deal with allocations of variable size
+    - This is where Python Lists become important! They're allocated on the heap by default
+    - It's a big cloud of memory. Allocations are made in continuous chunks, but they could start anywhere
+    - Why do this? So the memory can be allocated and freed in any order
+    - What does that mean? Show how multiple lists are allocated using the example of a Musou game
