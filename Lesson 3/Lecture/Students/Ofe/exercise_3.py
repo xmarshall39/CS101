@@ -69,7 +69,6 @@ Bonus 1.) Making use the List member function append(), call print_list_stats() 
 Bonus 2.) Like the others, write a final function to calculate Mode
             - This function *could* return one value, but should it?
             - Add the output of this function to print_list_stats()
-            
 Bonus 2.5) How did you calculate Mode? If you used loops, try writing an alternative mode function that does not.
             If you didn't, try writing a version that uses loops :)
             If you can't think of an answer, just skip this
@@ -80,13 +79,12 @@ Bonus 3.) Create a 4th list using random student stats
             - Run print_list_stats() on this random class
 
 Bonus 4321.) Using the All Classes list, create a new 5th list featuring a random selection of existing student grades
-            - First, make a copy of the All Classes list called "sample_class". Our solution will modify the list unlike sorted()
-                - For this, use the member function copy()
-            - This "sample_class" list must be the size of the largest class among A, B, and C
-                - It will NOT be the size of our All Classes list
+            - First, make a copy of the All Classes list. Our solution will modify the list unlike sorted()
+            - For this, use the member function copy()
+            - This "sample class" must be the size of the largest class among A, B, and C
             - You cannot use random.randint() for this assignment
-            - You instead use random.shuffle() and list slicing
-            - Documentation 
+            - You instead must use random.shuffle() and list slicing
+            - Documentation
                 - https://www.geeksforgeeks.org/python/python-list-slicing/
                 - https://www.w3schools.com/python/ref_random_shuffle.asp
 '''
