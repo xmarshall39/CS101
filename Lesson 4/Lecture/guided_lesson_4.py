@@ -6,5 +6,5 @@
 # However, strings are IMMUTABLE (in python) and FIXED SIZE (in all languages)
 # What else can we do...
 # upper(), lower(), isdigit(), isalpha(), 
-# in keyword for strings and lists, split()
+# in keyword for strings and lists, split(), join()
 # Next time: files
