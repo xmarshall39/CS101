@@ -1,6 +1,11 @@
 '''
-Warm Up: Create a function that takes in a word and returns a string with all vowels [a, e, i, o u] removed.
-Use a for loop and the string member function join() for this problem.
+Warm Ups: 
+1.) Write a for loop that prints all numbers from 1-100
+
+2.) Write a while loop that asks the player for input until they type "stop".
+
+3.) Write a function that prints a random element from a list
+
 '''
 '''
 Exercise 4: Wordle Pt.1
@@ -77,18 +82,6 @@ Bonus 2.) Add a splash of color
 Bonus 3.) Dramatic timing
             - Like in wordle, reveal correct letters one at a time, with a slight delay between reveals
 '''
-def word_match(target, guess):
-    target = target.upper(); guess = guess.upper();
-    if len(target) != len(guess):
-        print("Error: Target String and Guess String should be the same length!!")
-        return ""
-    result_list = ['-'] * len(guess)
-    for i in range(len(guess)):
-        if guess[i] == target[i]:
-            result_list[i] = guess[i]
-        elif guess[i] in target:
-            result_list[i] = guess[i].lower()
-    return "".join(result_list)
 
 
 
