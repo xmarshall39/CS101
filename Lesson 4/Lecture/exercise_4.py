@@ -1,13 +1,4 @@
 '''
-Warm Ups: 
-1.) Write a for loop that prints all numbers from 1-100
-
-2.) Write a while loop that asks the player for input until they type "stop".
-
-3.) Write a function that prints a random element from a list
-
-'''
-'''
 Exercise 4: Wordle Pt.1
 Objective: Get familiar with the basics of string comparison and manipulation
 Today, we're gonna make a basic version of Wordle. If you haven't played before (or yet today)
@@ -21,6 +12,8 @@ end up being a 2-session assignment, and that's okay!
 
 Instructions are as follows:
 
+0.) Copy this variable into your code:
+five_letter_words = ['ANIMA', 'TURCO', 'VOLAR', 'FOUND', 'PAVIN', 'BEEST', 'ATMID', 'VACUA', 'AGHAN', 'DAZED', 'SALMI', 'NARKS', 'MOHOS', 'TAMES', 'DUKHN', 'HICHT', 'DINTS', 'PATEL', 'FLUTE', 'HEYGH']
 
 1.) Create a function called select_word()
     - This function will accept one parameter: a list of words
@@ -36,7 +29,7 @@ Instructions are as follows:
         - The guess is 5 letters long
         - For now, we WON'T worry about the guess being a valid english word
 
-3.) [DO NOTHING] To help you, I wrote a function called word_match(). Here's how it works
+3.) [DO NOTHING] To help you, I wrote a function called word_match(). Here's how it works:
     - Determines and reports how close a word is to another (target) word
     - Accepts 2 parameters: a target word and a guessed word
     - Returns a indicating the quality of a match. Here's how that would look with the target word "HORSE":
@@ -81,22 +74,4 @@ Bonus 2.) Add a splash of color
             - I've been doing a lot of typing, so just lmk when you get here :)
 Bonus 3.) Dramatic timing
             - Like in wordle, reveal correct letters one at a time, with a slight delay between reveals
-'''
-
-
-
-
-'''
-Exercise 5: Wordle Pt.2
-Objective: Learn how to read and parse files
-
-We're gonna make a few small modifications to our Wordle code from last week to make it more true to the
-actual game. Since this assignment is simpler in concept, I'll provide less detailed instructions than before.
-
-1.) Replace the provided short word list with a list of all 5-letter words in the english dictionary
-2.) Ensure that a guess must be a 5-letter word in the english dictionary in order to be valid
-
-Bonus 1.) Provide a solution that only opens the dictionary file ONCE
-Bonus 2.) Allow the player the option to play in a second language
-            - You'll have to pick a language and find the dictionary yourself :)
 '''

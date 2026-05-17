@@ -27,4 +27,8 @@
 
 # there are no restrictions to how we do that
 
+# An Aside: Importing local files and relative directories
+import example_module
+from .. import example_module_2
+from ....CS101 import example_module_3
 # Next time: files
