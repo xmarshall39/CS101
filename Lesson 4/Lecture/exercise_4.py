@@ -34,7 +34,7 @@ five_letter_words = ['ANIMA', 'TURCO', 'VOLAR', 'FOUND', 'PAVIN', 'BEEST', 'ATMI
     - Accepts 2 parameters: a target word and a guessed word
     - Returns a indicating the quality of a match. Here's how that would look with the target word "HORSE":
         - Every letter in "HORSE" not guessed correctly will be represented in the output by a '-'
-            - So if I guess "SHUNT" the output will be "-----"
+            - So if I guess "BUNDT" the output will be "-----"
         - Every letter guessed that's present in the target word, but not in the correct position will be output in lowercase
             - So if I guess "THINK" the output will be "-h---"
         - Every letter guessed that's present and in the right location will appear as uppercase
@@ -74,4 +74,7 @@ Bonus 2.) Add a splash of color
             - I've been doing a lot of typing, so just lmk when you get here :)
 Bonus 3.) Dramatic timing
             - Like in wordle, reveal correct letters one at a time, with a slight delay between reveals
+Bonus 4.) Results
+            - Show the results of your game in a grid of symbols, similar to the results you share with others
+            - You could use something like (+, #, -) for (correct, almost, wrong) guesses
 '''
