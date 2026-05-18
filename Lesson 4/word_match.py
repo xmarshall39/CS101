@@ -19,9 +19,10 @@ if __name__ == "__main__":
     while len(word) != 5:
         word = input("Please make it 5 letters:")
     '''
-    words = ["HORSE", "TROUT", "HAPPY", "MAKES", "ZUMBA", "QUIET"]
+    words = ["HORSE", "TROUT", "HAPPY", "MAKES", "ZUMBA", "QUIET", "HOUSE"]
 
     #for every word, try guessing every other word
     for target in words:
+        print("\nTarget: " + target)
         for guess in words:
-            print(word_match(target, guess))
+            print(word_match(target, guess) + f"\t({guess})")

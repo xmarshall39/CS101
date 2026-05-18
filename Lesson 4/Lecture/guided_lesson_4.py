@@ -8,7 +8,7 @@
 # What else can we do...
 # String concatenation (the + operator)
 # upper(), lower(), isdigit(), isalpha(), 
-# in keyword for strings and lists, split(), join()
+# *in* keyword for strings and lists, split(), join()
 
 # Pt.2 Nesting:
 # This refers to using some coding feature within itself
