@@ -23,7 +23,7 @@ five_letter_words = ['ANIMA', 'TURCO', 'VOLAR', 'FOUND', 'PAVIN', 'BEEST', 'ATMI
 
 1.) Create a function called guess_validator()
     - This function will evaluate if the player made a valid guess (return True or False)
-    - The function must accept 2 parameters: a guessed word, and a absentee list
+    - The function must accept 2 parameters: a guessed word, and an absentee list
     - A guess is considered valid if it meets the following conditions:
         - The guess contains only letters from a-z
         - The guess is 5 letters long
@@ -32,7 +32,7 @@ five_letter_words = ['ANIMA', 'TURCO', 'VOLAR', 'FOUND', 'PAVIN', 'BEEST', 'ATMI
 3.) [DO NOTHING] To help you, I wrote a function called word_match(). Here's how it works:
     - Determines and reports how close a word is to another (target) word
     - Accepts 2 parameters: a target word and a guessed word
-    - Returns a indicating the quality of a match. Here's how that would look with the target word "HORSE":
+    - Returns a string indicating the quality of a match. Here's how that would look with the target word "HORSE":
         - Every letter in "HORSE" not guessed correctly will be represented in the output by a '-'
             - So if I guess "BUNDT" the output will be "-----"
         - Every letter guessed that's present in the target word, but not in the correct position will be output in lowercase
