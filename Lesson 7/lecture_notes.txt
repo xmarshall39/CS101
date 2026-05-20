@@ -1,7 +1,4 @@
 Lesson x: Classes, Objects, Member functions, Casting
-Recap:
-- Last week we talked about how the computer uses its memory to make your code possible
-- And we formally introduced a new data type called a list
 
 Today:
 - We're gonna talk about a design principle that drives Python as a programming language and essentially all others you'll ever use
@@ -21,7 +18,6 @@ Today:
 class Dog: # This is a class definition
     name = ""
     breed_name = ""
-    color = ""
     height = 0
     weight = 0
 
@@ -29,7 +25,7 @@ class Dog: # This is a class definition
         weight += servings * 0.01
 
     def print_dawg(): # MEMBER FUNCTION
-        print(f"{name} is a {color} {breed_name} who's {height}cm tall and {weight}kg")
+        print(f"{name} is a {breed_name} who's {height}cm tall and {weight}kg")
         if is_fat():
             print(f"{name} is fat now...")
             
@@ -40,14 +36,12 @@ class Dog: # This is a class definition
 myDog = Dog() # This is a class instance
 myDog.name = "Ezra"
 myDog.breed_name = "doberman"
-myDog.color = "black"
 myDog.height = 100
 myDog.weight = 40
 
 someOtherDog = Dog() # This is another class instance
 someOtherDog.name = "Pitbull The Rapper"
 someOtherDog.breed_name = "pitbull"
-someOtherDog.color = "white"
 someOtherDog.height = 30
 someOtherDog.weight = 35
 
@@ -58,6 +52,47 @@ while input("Feed Dog? (y/n)\n") == "y":
     servings = int(input("How Many Servings?))
     myDog.feed(servings)
     myDog.print_dawg()
+
+'''
+Okay, but what if I want to make different kinds of Animals, not just dogs?
+Well, we'd expect that all animals have *some* proerties in common, and we'd want to compare them.
+Let's take some of the more generic content out of our Dog class and put in an Animal class.
+Then, we'll use something called Inheritance to share those properties between Animals
+'''
+
+class Animal:
+    name = ""
+    height = 0
+    weight = 0
+    phylum = "" #Or some other taxonomy value
+
+    # Let's say that all Animals can be fed
+    def feed(servings): # MEMBER FUNCTION
+        weight += servings * 0.01
+
+# Now we can rewrite the Dog as a type of Animal:
+class Dog:
+
+# And make another Animal... Let's say a Bear:
+class Bear:
+
+# Examples Here:
+
+'''
+Great! We have different types of pets and can make as many as we wish.
+But it's annoying that we have to write so much code to define those common properties.
+Plus, I think we should help make sure that all Animals have height and weight values, and I don't forget to add them
+For things like this, we use the class *Constructor*. It's a function that runs automatically when a class object
+is created. If we give the Constructor parameters, we can initialize it with certain data quickly and easily
+'''
+
+'''
+I also feel like we should be able to tell if any Pet is fat too. 
+But what determines a fat dog vs cat isn't quite the same.
+So, I want the Pet class to have ownership of the is_fat() function, but I want the contents to be
+different on each child class. This concept is called overriding since we're changing the behavior
+of an inherited class function. Let me show you:
+'''
 
 
 Casting: An Aside
