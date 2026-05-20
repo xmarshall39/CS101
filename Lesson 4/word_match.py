@@ -1,3 +1,5 @@
+#   CHLOE, DON'T LOOK AT THIS!!!
+
 def word_match(target, guess):
     target = target.upper(); guess = guess.upper();
     if len(target) != len(guess):

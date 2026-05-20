@@ -70,9 +70,6 @@ Bonus 2.) Like the others, write a final function to calculate Mode
             - This function *could* return one value, but should it?
             - Add the output of this function to print_list_stats()
             
-Bonus 2.5) How did you calculate Mode? If you used loops, try writing an alternative mode function that does not.
-            If you didn't, try writing a version that uses loops :)
-            If you can't think of an answer, just skip this
 
 Bonus 3.) Create a 4th list using random student stats
             - The size of this list must match the smallest class among A, B, and C
