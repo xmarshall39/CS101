@@ -30,12 +30,14 @@ def guess_validator(guess, abesntees):
 
 def try_guess(answer, guess, absentees):
     if answer == guess:
+        print("true")
         return True, word_match(answer, guess)
     
     else:
         for i in range (len(answer)):
             if guess[i] not in answer:
                 absentees.append(guess[i])
+        print("false")
 
 
         return False, word_match(answer, guess)
