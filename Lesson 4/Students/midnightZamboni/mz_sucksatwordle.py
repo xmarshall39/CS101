@@ -32,25 +32,27 @@ def try_guess(answer, guess, absentees):
     if answer == guess:
         return True, word_match(answer, guess)
     
-    else:
+    elif guess_validator(guess, absentees):
         for i in range (len(answer)):
             if guess[i] not in answer:
                 absentees.append(guess[i])
 
-
         return False, word_match(answer, guess)
-        
+    
+    else:
+        return False, word_match(answer, guess)
 
 
 
 def word_match (answer, guess):
     dashesList = ["-", "-", "-", "-", "-"]
     
-    for i in range(len(answer)):
-        if guess[i] == answer[i]:
-            dashesList[i] = guess[i]
-        elif guess[i] in answer:
-            dashesList[i] = guess[i].lower()
+    if len(guess) == 5:
+        for i in range(len(answer)):
+            if guess[i] == answer[i]:
+                dashesList[i] = guess[i]
+            elif guess[i] in answer:
+                dashesList[i] = guess[i].lower()
 
     
     outcome = "".join(dashesList)
@@ -62,22 +64,31 @@ def run_Wordle (answer, turnCount, absentees):
     guess = input("Guess Word:    ").upper()
     guess_Attempt, guess_result = try_guess(answer, guess, absentees)
 
-    while not guess_validator(guess, absentees):
+    while not guess_validator(answer, absentees):
         print("Guesses must be a string of FIVE LETTERS.")
         guess = input("Guess word:    ").upper()
+
+        return False
 
     if guess_Attempt and turnCount <=6 :
         print(guess_result)
         print(f"Congratulations! The answer was {word_Answer}. You won after {turnCount} turns.")
 
+        return True
+        
+
     
     elif turnCount == 6:
         print(guess_result)
         print(f"You've taken your 6 turns and have failed. The answer was {word_Answer}.")
+        
+        return False
 
     else:
         print(guess_result)
         print(absentees)
+
+        return False
     
     
 
@@ -90,9 +101,9 @@ absentee_List = []
 word_Answer = select_word(five_letter_words)
 turnCount = 1
 
-run_Wordle (word_Answer, turnCount, absentee_List)
+base = run_Wordle (word_Answer, turnCount, absentee_List)
+turnCount += 1
 
-while turnCount <= 6:
-    run_Wordle (word_Answer, turnCount, absentee_List)
-    print(turnCount)
+while turnCount <= 6 and not base:
+    base = run_Wordle (word_Answer, turnCount, absentee_List)
     turnCount += 1
