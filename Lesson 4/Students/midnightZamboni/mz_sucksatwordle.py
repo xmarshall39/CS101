@@ -1,15 +1,10 @@
 import random
-'''
-6.) Now let's connect it all together and make our "game loop"
-    - First, select a word and reveal it to the player
-    - In a while loop, you must do the following:
-        - Show the absentee list to the player
-        - Take a guess as an input
-        - Validate that guess, and keep requesting input until the player provides a valid guess
-        - Remember: Only valid guesses contribute to guess count
-        - End the game on a correct guess
-        - Otherwise, keep playing until they've made 6 guesses
-'''
+import time
+import colorama
+from colorama import Fore, Style
+
+colorama.init()
+
 def select_word (words):
     chosenIndex = random.randrange(0, len(words))
 
@@ -35,7 +30,7 @@ def try_guess(answer, guess, absentees):
     elif guess_validator(guess, absentees):
         for i in range (len(answer)):
             if guess[i] not in answer:
-                absentees.append(guess[i])
+                absentees.add(guess[i])
 
         return False, word_match(answer, guess)
     
@@ -68,42 +63,77 @@ def run_Wordle (answer, turnCount, absentees):
         print("Guesses must be a string of FIVE LETTERS.")
         guess = input("Guess word:    ").upper()
 
-        return False
+        return False, guess_result
 
     if guess_Attempt and turnCount <=6 :
-        print(guess_result)
-        print(f"Congratulations! The answer was {word_Answer}. You won after {turnCount} turns.")
+        '''print(Fore.GREEN + guess_result)'''
+        print(f"{Style.RESET_ALL}Congratulations! The answer was {Fore.GREEN}{word_Answer}{Style.RESET_ALL}. You won after {turnCount} turns.")
 
-        return True
+        return True, guess_result
         
 
     
     elif turnCount == 6:
-        print(guess_result)
-        print(f"You've taken your 6 turns and have failed. The answer was {word_Answer}.")
+        '''print(guess_result)'''
+        print(f"You've taken your 6 turns and have {Fore.RED} failed. {Style.RESET_ALL} The answer was {Fore.GREEN}{word_Answer}{Style.RESET_ALL}.")
         
-        return False
+        return False, guess_result
 
     else:
-        print(guess_result)
-        print(absentees)
+        colorResult = []
+        for i in range(len(guess_result)):
+            if guess_result[i].isupper():
+                colorResult.append(f"{Fore.LIGHTGREEN_EX}{guess_result[i]}{Style.RESET_ALL} ")
+            elif guess_result[i].islower():
+                colorResult.append(f"{Fore.LIGHTYELLOW_EX}{guess_result[i]}{Style.RESET_ALL} ")
+            else:
+                colorResult.append(f"{Fore.LIGHTBLACK_EX}{guess_result[i]}{Style.RESET_ALL} ")
+        
 
-        return False
+        for i in range(len(colorResult)):
+            print(colorResult[i], end ='', flush=True)
+            time.sleep(0.5)
+            
+
+        print(f"\n{absentees}")
+
+
+        return False, guess_result
     
+
+def results_line(attempt):
+    results = ["-", "-", "-", "-", "-"]
+    for i in range(len(attempt)):
+        if attempt[i].isupper():
+            results[i] = "*"
+        if attempt[i].islower():
+            results[i] = "/"
     
+    line = " ".join(results)
+    return line
 
     
 
 five_letter_words = ['ANIMA', 'TURCO', 'VOLAR', 'FOUND', 'PAVIN', 'BEEST', 'ATMID', 'VACUA', 'AGHAN', 'DAZED', 'SALMI', 'NARKS', 'MOHOS', 'TAMES', 'DUKHN', 'HICHT', 'DINTS', 'PATEL', 'FLUTE', 'HEYGH']
 
 
-absentee_List = []
+absentee_Set = set()
 word_Answer = select_word(five_letter_words)
 turnCount = 1
 
-base = run_Wordle (word_Answer, turnCount, absentee_List)
+base, guess = run_Wordle (word_Answer, turnCount, absentee_Set)
 turnCount += 1
 
+attempts = []
+attempts.append(guess)
+
 while turnCount <= 6 and not base:
-    base = run_Wordle (word_Answer, turnCount, absentee_List)
+    base, guess = run_Wordle (word_Answer, turnCount, absentee_Set)
     turnCount += 1
+    attempts.append(guess)
+
+print("Here are your results:")
+for i in range(len(attempts)):
+    print(results_line(attempts[i]))
+
+print("* = Correct letter, correct place \n / = correct letter, wrong place \n - = wrong letter")

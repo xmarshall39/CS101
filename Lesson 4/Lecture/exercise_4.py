@@ -24,7 +24,7 @@ five_letter_words = ['ANIMA', 'TURCO', 'VOLAR', 'FOUND', 'PAVIN', 'BEEST', 'ATMI
 
 2.) Create a function called guess_validator()
     - This function will evaluate if the player made a valid guess (return True or False)
-    - The function must accept 2 parameters: a guessed word, and an absentee list
+    - The function must accept 1 parameters: a guessed word
     - A guess is considered valid if it meets the following conditions:
         - The guess contains only letters from a-z
         - The guess is 5 letters long
@@ -65,7 +65,7 @@ five_letter_words = ['ANIMA', 'TURCO', 'VOLAR', 'FOUND', 'PAVIN', 'BEEST', 'ATMI
         - Otherwise, keep playing until they've made 6 guesses
 
 Bonus 1.) Try changing your absentee list into a set object
-            - More info on sets here: 
+            - More info on sets here: https://www.geeksforgeeks.org/python/sets-in-python/
 Bonus 2.) Add a splash of color
             - In Wordle, correct letters in correct positions are highlighted green,
               present letters in incorrect positions are highlighted yellow,
