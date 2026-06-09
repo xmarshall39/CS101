@@ -22,6 +22,9 @@ def guessvalidator(guessedword):
         return False
 target_word = select_word(five_letter_words)
 
+def try_guess()
+    
+
 
 guess = input("make a guess for the target word!")
 if not guessvalidator(guess):
@@ -29,3 +32,11 @@ if not guessvalidator(guess):
 
 match = word_match.word_match(target_word, guess)
 print(match)
+
+
+#5.) Create a function called try_guess()
+#    - Read the player's validated guess and report its correctness using word_match()'s output
+ #   - This function accepts 3 parameters: a target word, a guessed word, and a absentee list
+  #  - If the player guesses correct, return 2 values: True and output of word_match()
+   #   - Add any guessed letters not present in the target word to the absentee list
+    #   - Return False and the output of word_match()

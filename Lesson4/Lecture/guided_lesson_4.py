@@ -22,7 +22,7 @@ while i < len(x):
 # len(), sorted(), and more work on strings too!
 # However, strings are IMMUTABLE (in python) and FIXED SIZE (in all languages)
 x_list[0] = 'b'
-x_list.append('y')
+x_list.append('y') #Adds elements to list
 print(x_list)
 #x[0] = 'b'
 #print(x)

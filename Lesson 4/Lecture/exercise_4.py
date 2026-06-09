@@ -75,6 +75,8 @@ Bonus 2.) Add a splash of color
             - I've been doing a lot of typing, so just lmk when you get here :)
 Bonus 3.) Dramatic timing
             - Like in wordle, reveal correct letters one at a time, with a slight delay between reveals
+            - In order for this to work correctly, you'll need to set the optional parameter "flush" to True in your print
+              statments.
 Bonus 4.) Results
             - Show the results of your game in a grid of symbols, similar to the results you share with others
             - You could use something like (+, #, -) for (correct, almost, wrong) guesses

@@ -48,7 +48,7 @@ Exercise 6: Text Adventure - Who Killed Coli???
 
 Premise: For this assignment we'll be making a simple text-adventure game where you play as a detective summoned to a
 mansion in the countryside to determine who killed Coli. When starting the game, the player is met with a brief
-synopsis of who The detective can travel from room to room, talk to NPC's and
+synopsis of who The detective is and why you're there. You can travel from room to room, talk to NPC's and
 search for clues. Once they determine who the murderer is, they must return to the living room and announce
 the name of the killer. This ends the game and shows text to the player indicating if their guess was correct,
 saying what happens to the killer, and closing out the game. Finally, gameplay stats will be shown to the player.
@@ -58,9 +58,20 @@ There are multiple ways to represent discreet locations in games, and this assig
 "good" ones. Instead, we'll be using what you've already learned and pushing it to its limits.
 To that end, every room in the game will be represented by its own function. That room function will declare
 what rooms you can go to, and what options are available to you in that room. To help you, I've included a
-function you can import
+function you can use
 
 '''
 
 def move_room(funcName):
     globals()[funcName]()
+
+def Room1():
+    connected_rooms = ["Library", "Kitchen", "Ballroom"]
+    selected_room = input(f"Choose a Room from this list: {connected_rooms}")
+    if selected_room in connected_rooms:
+        move_room(selected_room)
+    print("Hi")
+    move_room("Room2") # Room2()
+
+def Library():
+    print("Bye")
