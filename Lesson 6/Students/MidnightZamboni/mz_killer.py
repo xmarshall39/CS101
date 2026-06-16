@@ -16,6 +16,7 @@ what rooms you can go to, and what options are available to you in that room. To
 function you can use
 
 '''
+
 import time
 import colorama
 from colorama import Fore, Style
@@ -23,18 +24,24 @@ from colorama import Fore, Style
 def move_room(funcName):
     globals()[funcName]()
 
-def isLocked (door, key, inventory, used_inventory):
+def isLocked (door, key, object, inventory, used_inventory):
     unlocked = False
-    if key in inventory:
-        inventory.remove(key)
-        used_inventory.append(key)
+    if object in inventory and key == object:
+        inventory.remove(object)
+        used_inventory.append(object)
         unlocked = True
-        print(f"{Fore.GREEN}You have unlocked {door} with {key}.{Style.RESET_ALL}")
-    '''
-    if not unlocked:
-        f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}"
+        print(f"{Fore.GREEN}You have opened {door} with {object}.{Style.RESET_ALL}")
 
-'''
+    elif object in used_inventory:
+        unlocked = True
+        print(f"{Fore.GREEN}You have already unlocked {door} with {key}.{Style.RESET_ALL}")
+    
+    elif key != object:
+        print(f"{Fore.GREEN}It doesn't seem like you can unlock the {door} with {object}.{Style.RESET_ALL}")
+        
+    return unlocked
+
+
 
 def Ofelia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker):
     while choice != "back":

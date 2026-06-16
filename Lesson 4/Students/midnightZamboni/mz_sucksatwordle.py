@@ -112,9 +112,26 @@ def results_line(attempt):
     line = " ".join(results)
     return line
 
-    
+language_choice = input("Choose a language: ENGLISH   FRENCH   GERMAN\n").lower()
+five_letter_words = [] 
 
-five_letter_words = ['ANIMA', 'TURCO', 'VOLAR', 'FOUND', 'PAVIN', 'BEEST', 'ATMID', 'VACUA', 'AGHAN', 'DAZED', 'SALMI', 'NARKS', 'MOHOS', 'TAMES', 'DUKHN', 'HICHT', 'DINTS', 'PATEL', 'FLUTE', 'HEYGH']
+if language_choice == "english":
+    dicto = open("words_alpha.txt", "r", encoding="utf-8")
+    allWords = dicto.readlines()
+if language_choice == "french":
+    dicto = open("francais.txt", "r", encoding="utf-8")
+    allWords = dicto.readlines()
+if language_choice == "german":
+    dicto = open("wordlist-german.txt", "r", encoding="utf-8")
+    allWords = dicto.readlines()
+
+for line in allWords:
+    if len(line) == 6:
+        five_letter_words.append(line.strip("\n").upper())
+
+#five_letter_words = ['ANIMA', 'TURCO', 'VOLAR', 'FOUND', 'PAVIN', 'BEEST', 'ATMID', 'VACUA', 'AGHAN', 'DAZED', 'SALMI', 'NARKS', 'MOHOS', 'TAMES', 'DUKHN', 'HICHT', 'DINTS', 'PATEL', 'FLUTE', 'HEYGH']
+
+
 
 
 absentee_Set = set()
@@ -127,6 +144,7 @@ turnCount += 1
 attempts = []
 attempts.append(guess)
 
+
 while turnCount <= 6 and not base:
     base, guess = run_Wordle (word_Answer, turnCount, absentee_Set)
     turnCount += 1
@@ -137,3 +155,4 @@ for i in range(len(attempts)):
     print(results_line(attempts[i]))
 
 print("* = Correct letter, correct place \n / = correct letter, wrong place \n - = wrong letter")
+dicto.close()

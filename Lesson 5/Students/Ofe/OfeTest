@@ -1,0 +1,6 @@
+
+vowels = ["a","e","i","o","u"]
+
+def check(ans):
+    if input(ans) in vowels:
+        print("DUCK")
