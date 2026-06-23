@@ -38,6 +38,9 @@ def isLocked (door, key, object, inventory, used_inventory):
     
     elif key != object:
         print(f"{Fore.GREEN}It doesn't seem like you can unlock the {door} with {object}.{Style.RESET_ALL}")
+    
+    elif len(inventory)== 0:
+        print(f"{Fore.GREEN}You don't have anything in your inventory to unlock {door}.{Style.RESET_ALL}")
         
     return unlocked
 
@@ -166,10 +169,16 @@ def take_object (objects, location, inventory):
                 input(f"Could be helpful, I think I'll put this {object_take} in my pocket.")
                 print(f"{Fore.GREEN} You have added {object_take} to your inventory.{Style.RESET_ALL}")
                 take_affirm = input(f"{Fore.BLUE}Would you like to add one of these objects to your inventory?   YES   NO\n{Style.RESET_ALL}").lower()
+            else:
+                print(f"Did I ever mention {object_take}? NO!")
+                object_take = input(f"{Fore.BLUE}Which object will you take? {objects}\n{Style.RESET_ALL}").lower()
 
         if take_affirm == "no":
             input("Back to the matter at hand.")
-
+        
+        else:
+            print("Type clearly, would ya?!?")
+            take_affirm = input(f"{Fore.BLUE}Would you like to add one of these objects to your inventory?   YES   NO\n{Style.RESET_ALL}").lower()
 
 def check_stats(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
     check = input(f"{Fore.BLUE}Check   INVENTORY   ROOMS   NPCS   NOTES   BACK\n{Style.RESET_ALL}").lower()
@@ -185,14 +194,20 @@ def check_stats(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker,
             print(f"Let's see what I jotted down so far...")
             for i in range(len(notes_taken)):
                 print("-" + notes_taken[i])
+        else:
+            print("...try that again...")
+            check = input(f"{Fore.BLUE}Check   INVENTORY   ROOMS   NPCS   NOTES   BACK\n{Style.RESET_ALL}").lower()
 
     if check == "back":
         livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+    
 
 def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
     input(f"\n{Fore.RED} THE LIVING ROOM {Style.RESET_ALL}")
     input("It's a small room, unassuming. Signs of nerds doing computer things everywhere. Noisy from all the laptop fans running nonstop. A coffee table, a cabinet, and a desk fill the bulk of the space. \nTwo bodies: one upright, breathing. The other, not so much.")
     input("Time to make my move.")
+    if "living room" not in visited_rooms:
+        visited_rooms.append("living room")
     action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
     if action != "move":
         if action == "talk":
@@ -242,14 +257,20 @@ def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
 
                 if look_choice == "back":
                     livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-            
-            livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
 
+                else:
+                    print("What was that? Type it again!")
+                    look_choice = input(f"{Fore.BLUE}What would you like to look at? \n BODY   PERSON   DESK   TABLE   CABINET   BACK\n{Style.RESET_ALL}").lower()
+                    
+            livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
 
         if action == "notes":
             print("Alright, alright. I gotta take a time out, collect my thoughts.")
             check_stats(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items) 
 
+        else:
+            print("No clue what you just said, kid.")
+            action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
 
     if action == "move":
         move_choice = input(f"{Fore.BLUE}Where would you like to go? \n BEDROOM   PATIO   DINING   BACK\n{Style.RESET_ALL}").lower()
@@ -267,7 +288,8 @@ def bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, use
     input("Nothing worse than an AirBnB bedroom. Stale air, Live Laugh Love signs, and two twin beds that they probably listed as being able to sleep 4 adults. Whata racket.")
     input("To step into this particular bedroom, I've gotta tip-toe around a pile of suitcases. There's also a bureau and a guy lounging on one of the beds, scrolling on his phone. Lets get to work.")
     action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
-
+    if "bedroom" not in visited_rooms:
+        visited_rooms.append("bedroom")
     if action != "move":
         if action == "talk":
             if "Trout" not in npcs_spoken:
@@ -321,7 +343,12 @@ def bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, use
 
 def patio(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
     input(f"\n{Fore.RED} THE PATIO {Style.RESET_ALL}")
-    input("")
+    input("The nighty is hot, sticky, buggy like a text-based adventure coded by an artist in PYthon.")
+    input("It's a small patio opening up to an even smaller yard. There's a number of planters taking up most of the floor space, all teeming with life, unlike a certain TA.")
+    input("There's another coding student there, fidgeting with the foliage. Might offer me some good info if I ask the right questions.")
+    if "patio" not in visited_rooms:
+        visited_rooms.append("patio")
+    action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
 
 
 
@@ -336,7 +363,7 @@ def bathroom_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracke
         input("Should I have been surprised that the bathroom door is locked. I don't know, but I was. I rattle the knob, at the very least expecting an 'Occupied!' or 'Get lost!' but no one answers.")
         input("'Hey' I knock. And again, this time like I mean business. 'HEY! Anyone in there?' Nothin'. Figures.")
         input("I inspect the knob. Looks like a simple lock, land-lord grade for sure. I could probably pick it if I had the right perscription lenses on... and the right tool.")
-        door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK{Style.RESET_ALL}\n").lower()
+        door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK\n{Style.RESET_ALL}\n").lower()
         while door_choice != "back":
             if door_choice == "use":
                 use_choice = input(f"{Fore.BLUE}What would you like to use on the bathroom door?\n {inventory}{Style.RESET_ALL}").lower()
@@ -347,7 +374,7 @@ def bathroom_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracke
                     break
                 else:
                     input("Damn. Gonna be tougher than I thought. Might need to look around more.")
-                    door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK{Style.RESET_ALL}").lower()
+                    door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK\n{Style.RESET_ALL}").lower()
         if door_choice == "back":
             bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
     
@@ -375,11 +402,14 @@ def secret_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker,
             
     if "knife" in used_items:
         secrettunnel(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+        visited_rooms.append("secret tunnel")
 
 
 def bathroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
     input("The door didn't even have to open half way before the smell to hit me. Bleach. Must've been been buckets of it to burn my nose hairs this bad. Once my eyes stopped watering, I could finally see the room in its entirety.")
     input("A one-window bathroom as shoddily constructed as a student's murder-mystery code assignment. Uneven walls, exposed plumbing, and a leaky sink. Ugh.")
+    if "bathroom" not in visited_rooms:
+        visited_rooms.append("bathroom")
     action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  MOVE  NOTES   BACK\n{Style.RESET_ALL}").lower()
     if action =="look":
         look_choice = input(f"{Fore.BLUE}What would you like to look at? \n WINDOW   WALLS   PLUMBING   BACK\n{Style.RESET_ALL}").lower()
@@ -390,23 +420,54 @@ def bathroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, us
                 if "A strong bleach smell in the bathrom indicates a very recent cleaning job." not in notes_taken:
                     print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
                     notes_taken.append("A strong bleach smell in the bathrom indicates a very recent cleaning job.")
+                look_choice = input(f"{Fore.BLUE}What would you like to look at? \n WINDOW   WALLS   PLUMBING   BACK\n{Style.RESET_ALL}").lower()
+
             else:
                 input("It's open, probably to deal with the bleach aroma. Would AirBnb hosts use THIS much chemical to clean a bathroom, with new guests coming in so soon? I would hate to see what happened in here if that's the case.")
                 input("No, can't be the case. There must be something else here.")
                 if "A strong bleach smell in the bathrom indicates a very recent cleaning job." not in notes_taken:
                     print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
                     notes_taken.append("A strong bleach smell in the bathrom indicates a very recent cleaning job.")
-            look_choice = input(f"{Fore.BLUE}What would you like to look at? \n WINDOW   WALLS   PLUMBING   BACK\n{Style.RESET_ALL}").lower()
+            
+                look_choice = input(f"{Fore.BLUE}What would you like to look at? \n WINDOW   WALLS   PLUMBING   BACK\n{Style.RESET_ALL}").lower()
 
             if look_choice == "walls":
                 input("They certainly did a number on this paint job. Drips of off-white paint on every surface. Streaky roller marks from floor to ceiling. There's one squarish-patch of drywall that's a slightly different color.")
-'''
-            if look_choice == "suitcases":
-                input("Six bags make a sort of obstacle course between the door and everything else in the goddamn room. Clothes spilling out everywhere. There's a few notebooks and bits of art supplies to add to the tripping hazards. Seems like they've been here for a hot second.")
-                look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   BUREAU   SUITCASES   BACK\n{Style.RESET_ALL}").lower()
+                look_choice = input(f"{Fore.BLUE}What would you like to look at? \n WINDOW   WALLS   PATCH   PLUMBING   BACK\n{Style.RESET_ALL}").lower()
+            if look_choice == "patch":
+                secret_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+            if look_choice == "plumbing":
+                input("A prety standard fair plumbing job. Pex on the sink, chrome on the tub, that sorta thing. Messy finishing, but, I guess, functional. There is one thing that sticks out, literally and figuratively.")
+                input("About a half inch of CPVC pokes out of the wall, uncapped, open to all the bathroom elements. Or... opening the bathroom to all the pipe elements. What sorta plumbing job is that...")
+                if "There is an uncapped and unexplained pipe in the wall of the bathroom." not in notes_taken:
+                    print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
+                    notes_taken.append("There is an uncapped and unexplained pipe in the wall of the bathroom,")
+                look_choice = input(f"{Fore.BLUE}What would you like to look at? \n WINDOW   WALLS   PLUMBING   BACK\n{Style.RESET_ALL}").lower() 
+
             if look_choice == "back":
-                bathroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-                '''
+                bathroom_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+
+    if action == "notes":
+        print("Alright, alright. I gotta take a time out, collect my thoughts.")
+        check_stats(inventory, visited_rooms, npcs_spoken, notes_taken, used_items)
+
+    if action == "move":
+        if "secret tunnel" in visited_rooms:
+            move_choice = input(f"{Fore.BLUE}Where would you like to go? \nBEDROOM   TUNNEL   BACK\n{Style.RESET_ALL}").lower()
+            if move_choice == "bedroom":
+                bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+            if move_choice =="tunnel":
+                secrettunnel(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+            if move_choice == "back":
+                bathroom_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+        else:
+            move_choice = input(f"{Fore.BLUE}Where would you like to go? \nBEDROOM   BACK\n{Style.RESET_ALL}").lower()
+            if move_choice == "bedroom":
+                bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+            if move_choice =="back":
+                bathroom_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+
+
 
 def secrettunnel(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
     print("tunnel")
