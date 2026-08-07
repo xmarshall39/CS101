@@ -116,6 +116,8 @@ def Julia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
             input("'Two whole TAs for a class of three?'")
             input(f"{Fore.LIGHTBLACK_EX}Well... Coli was actually trying to help the class. I was just there to be there. Maybe monitor cheating or attendance. It's really just a joke, though!{Style.RESET_ALL}")
             input("'Lotta jokes with you lot, huh?'")
+
+            choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHY   BACK\n{Style.RESET_ALL}").lower()
         
         if choice == "what":
             input("'Explain to me EXACTLY what it is you do for this class.'")
@@ -127,17 +129,23 @@ def Julia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
             if "Julia thinks someone probably kept track of the student's class contributions." not in notes_taken:
                 print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
                 notes_taken.append("Julia thinks someone probably kept track of the student's class contributions.")
-            npc_tracker.append("juliaWhat")
+            if "juliaWhat" not in npc_tracker:
+                npc_tracker.append("juliaWhat")
+
+            choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHY   BACK\n{Style.RESET_ALL}").lower()
+
         if choice == "why":
             if "juliaWhat" in npc_tracker:
                 input("'Why'd you get the TA moniker then, if you were just 'hanging out'?'")
                 input(f"{Fore.LIGHTBLACK_EX}Well, it was funny, I guess! Coli was there trying to help. She was functionally a TA for that first class. \n Then I showed up and got named the 'Real TA' after Coli volunteered for it. Just a bit of irony. Funny, that's all!{Style.RESET_ALL}")
                 input("'Sure... funny.'")
-                if "Julia, and uninvolved friend, was named TA to spite Coli for wanting to be TA." not in notes_taken:
-                    notes_taken.append("Julia, and uninvolved friend, was named TA to spite Coli for wanting to be TA.")
+                if "Julia, an uninvolved friend, was named TA to spite Coli for wanting to be TA." not in notes_taken:
+                    notes_taken.append("Julia, an uninvolved friend, was named TA to spite Coli for wanting to be TA.")
                     print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
                 if "juliaWhy" not in npc_tracker:
                     npc_tracker.append("juliaWhy")
+
+                choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHY   BACK\n{Style.RESET_ALL}").lower()
 
             else:
                 input("Don't think I have enough info to ask this question, yet. I oughtta keep looking around, come back later.")
@@ -275,7 +283,7 @@ def Trout_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
         choice= input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHEN   WHERE   WHY   BACK\n{Style.RESET_ALL}").lower()
 
 def take_object (objects, location, inventory):
-    input (f"Ah, theres some stuff in this {location}. Looks like a\n {objects}")
+    print (f"Ah, theres some stuff in this {location}. Looks like a\n {objects}")
     take_affirm = input(f"{Fore.BLUE}Would you like to add one of these objects to your inventory?   YES   NO\n{Style.RESET_ALL}").lower()
     while take_affirm !="no":
         if take_affirm == "yes":
@@ -355,6 +363,7 @@ def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
             look_choice = input(f"{Fore.BLUE}What would you like to look at? \n BODY   PERSON   DESK   TABLE   CABINET   BACK\n{Style.RESET_ALL}").lower()
 
             while look_choice != "back":
+
                 if look_choice == "cabinet":
                     location = "cabinet"
                     cab_contents = ["pen", "paper", "pencil", "stapler", "tape"]
