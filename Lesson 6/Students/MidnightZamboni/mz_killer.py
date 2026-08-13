@@ -21,9 +21,6 @@ import time
 import colorama
 from colorama import Fore, Style
 
-def move_room(funcName):
-    globals()[funcName]()
-
 def isLocked (door, key, object, inventory, used_inventory):
     unlocked = False
     if object in inventory and key == object:
@@ -53,7 +50,7 @@ def Ofelia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, 
             choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHEN   WHERE   WHY   BACK\n{Style.RESET_ALL}").lower()
             if "ofeliaWho" not in npc_tracker:
                 npc_tracker.append("ofeliaWho")
-        if choice == "what":
+        elif choice == "what":
             input("'What the hell happened here?'")
             input(f"{Fore.LIGHTBLACK_EX}We were working on our Computer Science finals when all of the sudden Coli starts coughing and sneezing all over the place.{Style.RESET_ALL}")
             input("'Ugh. Gross.'")
@@ -62,21 +59,24 @@ def Ofelia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, 
             choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHEN   WHERE   WHY   BACK\n{Style.RESET_ALL}").lower()
             if "ofeliaWhat" not in npc_tracker:
                 npc_tracker.append("ofeliaWhat")
-        if choice == "when":
-            input("'When did this all go down?'")
-            input(f"{Fore.LIGHTBLACK_EX}I dunno, like... 30-ish minutes ago???{Style.RESET_ALL}")
-            input("'Love the accuracy, kid, thanks.'")
+        elif choice == "when":
+            input("'When did this sickness start? How long was she feeling under the weather?'")
+            input(f"{Fore.LIGHTBLACK_EX}Literally five, maybe ten minutes MAX. She was fine until... this.{Style.RESET_ALL}")
+            input("She gestures at the body. Never heard of a flu that could take down a person in minutes.")
+            if "The sickness that killed Coli took her down within minutes of manifesting. Something stronger than the flu must be at work here." not in notes_taken:
+                print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
+                notes_taken.append("The sickness that killed Coli took her down within minutes of manifesting. Something stronger than the flu must be at work here.")
             choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHEN   WHERE   WHY   BACK\n{Style.RESET_ALL}").lower()
             if "ofeliaWhen" not in npc_tracker:
                 npc_tracker.append("ofeliaWhen")
-        if choice == "where":
+        elif choice == "where":
             input("'Just you in here? Where's the rest of the coding crew?'")
             input(f"{Fore.LIGHTBLACK_EX}Once the cops showed up, we spread out through the house. We're all pretty shaken. Trout's in the bedroom, Chloe's on the patio, Julia's in the dining room, and Xavier's in the kitchen.{Style.RESET_ALL}")
             input("'Sure, sure. I'll make sure to check in on them, too.'")
             choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHEN   WHERE   WHY   BACK\n{Style.RESET_ALL}").lower()
             if "ofeliaWhere" not in npc_tracker:
                 npc_tracker.append("ofeliaWhere")
-        if choice == "why":
+        elif choice == "why":
             input("'So, what do you think, huh? Why would someone do this?'")
             input(f"{Fore.LIGHTBLACK_EX}I've got no clue, and how could I?! We just wanted to make games, ok? Coli was in on it! I mean, sure, we made jokes, but she was part of the team, our FRIEND!{Style.RESET_ALL}")
             input(("'Whoa, 'jokes'? Whaddya mean 'jokes'?'"))
@@ -119,7 +119,7 @@ def Julia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
 
             choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHY   BACK\n{Style.RESET_ALL}").lower()
         
-        if choice == "what":
+        elif choice == "what":
             input("'Explain to me EXACTLY what it is you do for this class.'")
             input(f"{Fore.LIGHTBLACK_EX}Honestly, nothing. I'd just pop in to hang out with my friends, see what they were up to! They just named me 'TA' because I was there. {Style.RESET_ALL}")
             input("'What about the attendence, assignments, cheating, those sorts of things?'")
@@ -134,10 +134,10 @@ def Julia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
 
             choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHY   BACK\n{Style.RESET_ALL}").lower()
 
-        if choice == "why":
+        elif choice == "why":
             if "juliaWhat" in npc_tracker:
                 input("'Why'd you get the TA moniker then, if you were just 'hanging out'?'")
-                input(f"{Fore.LIGHTBLACK_EX}Well, it was funny, I guess! Coli was there trying to help. She was functionally a TA for that first class. \n Then I showed up and got named the 'Real TA' after Coli volunteered for it. Just a bit of irony. Funny, that's all!{Style.RESET_ALL}")
+                input(f"{Fore.LIGHTBLACK_EX}Well, it was funny, I guess! Coli was there trying to help. She was functionally a TA for that first class. \nThen I showed up and got named the 'Real TA' after Coli volunteered for it. Just a bit of irony. Funny, that's all!{Style.RESET_ALL}")
                 input("'Sure... funny.'")
                 if "Julia, an uninvolved friend, was named TA to spite Coli for wanting to be TA." not in notes_taken:
                     notes_taken.append("Julia, an uninvolved friend, was named TA to spite Coli for wanting to be TA.")
@@ -182,18 +182,17 @@ def Chloe_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
                 npc_tracker.append("chloeWho")
             choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   BACK\n{Style.RESET_ALL}").lower()
 
-        if choice == "what":
+        elif choice == "what":
             input("'What are you doing out here? Don't you know there's a murderer on the loose?'")
             input(f"{Fore.LIGHTBLACK_EX} I'm just... sqeamish. Like, REALLY squeamish. So when Coli went down, I had to get outta there before a fainting spell came on. Had to get some fresh air, and quick.{Style.RESET_ALL}")
             input("'Get some air and start tearing up the landscaping?'")
             input(f"{Fore.LIGHTBLACK_EX}I'm just picking out the dead flowers, mostly. It looked like they could use it.{Style.RESET_ALL}")
             input("'Ah so you know a bit about plants, huh? Any of these potentially poisonous? I'm talking flu-like symptoms, bad enough to kill a gamer.'")
-            input("I point out the pink things growing out of nearly all of the planters. 'Like those for instance? They dangerous?'")
-            input(f"{Fore.LIGHTBLACK_EX}The... the petunias?{Style.RESET_ALL}")
-            input("'Sure.'")
-            input(f"{Fore.LIGHTBLACK_EX}...no...{Style.RESET_ALL}")
+            input(f"{Fore.LIGHTBLACK_EX}Kill a gamer? You think one of us took Coli out?? That's crazy!{Style.RESET_ALL}")
+            input("'They bring in a detective and suddenly everyone's shocked when I start asking questions.'")
+            input(f"{Fore.LIGHTBLACK_EX}Jeez. Well, it was tragic but it was NOT murder. Especially not by petunia.{Style.RESET_ALL}")
             input("'You know of any plant that might? Work with me, kid.'")
-            input(f"{Fore.LIGHTBLACK_EX}I mean, maybe a mold, or fungus? But death by a flu-fungus would take weeks, I've never heard about a fast-acting one. And whatever did that to Coli was quick to it.{Style.RESET_ALL}")
+            input(f"{Fore.LIGHTBLACK_EX}I mean, maybe a mold or fungus? But death by a flu-fungus would take weeks, I've never heard about a fast-acting one. And whatever did that to Coli was quick to it.{Style.RESET_ALL}")
             input("'Interesting.'")
             if "Chloe said that there might exist a fungus or mold that could cause a death by flu-like symptoms." not in notes_taken:
                 print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
@@ -237,7 +236,7 @@ def Trout_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
             if "troutWho" not in npc_tracker:
                 npc_tracker.append("troutWho")
 
-        if choice == "when":
+        elif choice == "when":
             input("'When did you guys get here? I mean, how long have you been staying here?'")
             input(f"{Fore.LIGHTBLACK_EX}Two days ago. We've just been hanging out, only got to the final tonight.{Style.RESET_ALL}")
             input("'Anything happen while you kids were just 'hanging out'?'")
@@ -246,13 +245,13 @@ def Trout_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
             if "troutWhen" not in npc_tracker:
                 npc_tracker.append("troutWhen")
 
-        if choice == "why":
+        elif choice == "why":
             if "ofeliaWhy" in npc_tracker:
-                input("'Alright, I'll be outta your hair in a second. Just one more question.'")
+                input("'Alright, I'll be outta your hair in a second. Just a question.. or a few.'")
                 input("'Why did you write a 'Blow Up Coli' function into your code?'")
                 input("At this, Trout jumps to his feet, defensive, paler than a terminal in light mode.")
-                input(f"{Fore.LIGHTBLACK_EX}C'mon, man, you can't be serious! That was a joke! It has nothing to do with this!{Style.RESET_ALL}")
-                input(("'The way I see it, it could have everything to do with this.'"))
+                input(f"{Fore.LIGHTBLACK_EX}That's what this is? You're interrogating me for murder?? She got sick! Yeah, it was weird but... c'mon, man.{Style.RESET_ALL}")
+                input(("'Just answer the question, will ya?'"))
                 input("He sits back down, head in his hands.")
                 input(f"{Fore.LIGHTBLACK_EX}During the first ever lecture Xavier hosted, Coli was there. Xavier was teaching, but she jumped in to try and explain something we weren't really understanding. \nShe appointed herself TA, and then she told us to try and write functions for the first time on our own. Just to be funny, as a little protest, I named my function 'Blow Up Coli'.{Style.RESET_ALL}")
                 input("'I see.'")
@@ -282,6 +281,51 @@ def Trout_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
         print("English, Einstein! I didn't understand ya!")
         choice= input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHEN   WHERE   WHY   BACK\n{Style.RESET_ALL}").lower()
 
+def Xavier_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
+    while choice != "back":
+        if choice == "who":
+            if "xavierWho" not in npc_tracker:
+                npc_tracker.append("xavierWho")
+            input("'Alright, Chef Boyardee, you got a real name?")
+            input(f"{Fore.LIGHTBLACK_EX}Xavier, I was the one teaching all the coding classes.{Style.RESET_ALL}")
+            input("'Ah, so a chef AND a professor.'")
+            input(f"{Fore.LIGHTBLACK_EX}Just a chef right now, if you have to put it that way. It's late, no one's eaten, and after everything with Coli, I think we can pretty much call the classes quits.{Style.RESET_ALL}")
+            input("'Makes sense for being down a whole TA.")
+        elif choice == "what":
+            if "xavierWho" in npc_tracker:
+                if "xavierWhat" not in npc_tracker:
+                    npc_tracker.append("xavierWhat")
+                input("'Tell me about these 'classes'. What's teaching it been like?'")
+                input(f"{Fore.LIGHTBLACK_EX}A lot of work, but pretty fine overall. Well, until...{Style.RESET_ALL} He gestures towards the living room with his spoon.")
+                input("'Expound on that: 'pretty fine'?'")
+                input(f"{Fore.LIGHTBLACK_EX} Started out strong. Everyone, plus Julia, showed up. Coli dropped out around the second week. Then Trout, thenm Ofelia. Turned into just Chloe and me until we all got together here.{Style.RESET_ALL}")
+                input("'And you were fine with that? Everyone bailing?'")
+                input(f"{Fore.LIGHTBLACK_EX}Bailing on a free, voluntary coding class that I hosted to help with free, voluntary game jams? Yeah, I think I'll be alright.{Style.RESET_ALL}.")
+                if "Xavier kept track of attendance to his classes, and Coli was the first to drop out." not in notes_taken:
+                    notes_taken.append("Xavier kept track of attendance to his classes, and Coli was the first to drop out.")
+
+            else:
+                input("Don't think I have enough info to ask this question, yet. I oughtta keep looking around, come back later.")
+                choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHEN   WHY   BACK\n{Style.RESET_ALL}").lower()
+
+        elif choice == "when":
+            if "xavierWhen" not in npc_tracker:
+                npc_tracker.append("xavierWhen")
+            input("'When did you all eat last?'")
+            input(f"{Fore.LIGHTBLACK_EX}Lunch, I guess. A few snacks here and there.{Style.RESET_ALL}")
+            input("'Anybody have any allergies? I'm thinking the 'spontaneously keel over and die' sort.'")
+            input(f"{Fore.LIGHTBLACK_EX}We cleared up all of the allergies when we went grocery shopping. Coli never mentioned anything, not sure what would have done that to her.{Style.RESET_ALL}")
+
+
+        
+    if choice == "back":
+        kitchen(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+    else:
+        print("If I don't get it, he won't get it. Try that again.")
+        
+
+
+
 def take_object (objects, location, inventory):
     print (f"Ah, theres some stuff in this {location}. Looks like a\n {objects}")
     take_affirm = input(f"{Fore.BLUE}Would you like to add one of these objects to your inventory?   YES   NO\n{Style.RESET_ALL}").lower()
@@ -297,6 +341,9 @@ def take_object (objects, location, inventory):
             else:
                 print(f"Did I ever mention {object_take}? NO!")
                 object_take = input(f"{Fore.BLUE}Which object will you take? {objects}\n{Style.RESET_ALL}").lower()
+        else:
+            print("It's a yes or no question. Try again.")
+            take_affirm = input(f"{Fore.BLUE}Would you like to add one of these objects to your inventory?   YES   NO\n{Style.RESET_ALL}").lower()
 
     if take_affirm == "no":
         input("Back to the matter at hand.")
@@ -340,8 +387,7 @@ def check_stats(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker,
             check = input(f"{Fore.BLUE}Check   INVENTORY   ROOMS   NPCS   NOTES   BACK\n{Style.RESET_ALL}").lower()
 
     if check == "back":
-        return check
-    
+        return check   
 
 def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
     input(f"\n{Fore.RED} THE LIVING ROOM {Style.RESET_ALL}")
@@ -370,21 +416,20 @@ def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
                     take_object(cab_contents, location, inventory)
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n BODY   PERSON   DESK   TABLE   CABINET   BACK\n{Style.RESET_ALL}").lower()
 
-                if look_choice == "desk":
+                elif look_choice == "desk":
                     input("There's a laptop sitting on the desk. I'm looking at a Visual Studio window open to 'Lecture 1'. Lecture 1? Weren't they here for the final? There are only a few lines of code to boot, an unfinished excercise.")
-                    input("Ah, interesting. This coder also had a notebook. It's filled with... bullet points on how to make the class better. A coupla notes on the lecturer's... teaching style, lets say. A little bit of animosity brewing here?")
-                    if "On the desk in the living room, there is an open laptop with unfinished work from Lecture 1, and a notebook critiquing Xavier, the lecturer." not in notes_taken:
+                    if "On the desk in the living room, there is an open laptop with unfinished work from Lecture 1." not in notes_taken:
                         input("I oughtta write this down.")
                         print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
-                        notes_taken.append("On the desk in the living room, there is an open laptop with unfinished work from Lecture 1, and a notebook critiquing Xavier, the lecturer.")
+                        notes_taken.append("On the desk in the living room, there is an open laptop with unfinished work from Lecture 1.")
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n BODY   PERSON   DESK   TABLE   CABINET   BACK\n{Style.RESET_ALL}").lower()
 
-                if look_choice == "table":
-                    input("Four whole laptops, open and running. No wonder it felt hot in here. Not a single coder at any of them, though. They're all open to a Visual Studio tab called 'Final', but only one has a 'Lecture Notes' tab open, too.")
+                elif look_choice == "table":
+                    input("Four whole laptops, open and running. No wonder it felt hot in here. Not a single coder at any of them, though. They're all open to a Visual Studio tab called 'Final', but only one has an 'Assignments' tab open, too.")
                     input("I can tell by the error messages that either this final's dense, or these students are. Either way, I know one of 'em didn't make it out alive.")
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n BODY   PERSON   DESK   TABLE   CABINET   BACK\n{Style.RESET_ALL}").lower()
 
-                if look_choice == "body":
+                elif look_choice == "body":
                     input("Dead, no doubt about it, but I can still see signs of the last moments of her poor, short life. I was expecting wounds, a gruesome scene like some of the other coding murders in my portfolio. But this... this one's different.")
                     input("Green in the face, sweat on the brow, two puffy eyes, and the glisten of a runny nose. Poor kid. Must've been a sudden sickness. Real sudden. Strange.")
                     if "Coli was killed by a sudden attack of sickness." not in notes_taken:
@@ -393,7 +438,7 @@ def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
                         notes_taken.append("Coli was killed by a sudden attack of sickness.")
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n BODY   PERSON   DESK   TABLE   CABINET   BACK\n{Style.RESET_ALL}").lower()
 
-                if look_choice == "person":
+                elif look_choice == "person":
                     input("She looks agitated, perplexed, unsure, like someone staring down the barrel of an infinite while loop. Every once in a while she pokes the body with the toe of her shoe, probably just to pass the time.")
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n BODY   PERSON   DESK   TABLE   CABINET   BACK\n{Style.RESET_ALL}").lower()
 
@@ -402,7 +447,7 @@ def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n BODY   PERSON   DESK   TABLE   CABINET   BACK\n{Style.RESET_ALL}").lower()
 
             if look_choice == "back":
-                livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+                action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
 
             else:
                 print("What was that? Type it again!")
@@ -423,11 +468,11 @@ def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
         move_choice = input(f"{Fore.BLUE}Where would you like to go? \n BEDROOM   PATIO   DINING   BACK\n{Style.RESET_ALL}").lower()
         if move_choice == "bedroom":
             bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-        if move_choice =="patio":
+        elif move_choice =="patio":
             patio(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-        if move_choice == "dining":
+        elif move_choice == "dining":
             diningroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-        if move_choice == "back":
+        elif move_choice == "back":
             livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
         else:
             print("...try that again...")
@@ -464,22 +509,22 @@ def bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, use
                  if look_choice == "person":
                      input("He's laying on the bed, doomscrolling, no doubt. We've all got our coping vices. Even as I trip my way over all of the junk on the floor, he doesn't bat an eye.")
                      look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   BUREAU   SUITCASES   BACK\n{Style.RESET_ALL}").lower()
-                 if look_choice == "bureau":
+                 elif look_choice == "bureau":
                      input("There's random things strewn around here. A phone charger, a bobby pin, and a new one for game developers: deoderant. The typical detritus of a traveling troupe.")
                      location = "Bureau"
                      contents = ["charger", "pin", "deoderant"]
                      take_object(contents, location, inventory)
                      look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   BUREAU   SUITCASES   BACK\n{Style.RESET_ALL}").lower()
-                 if look_choice == "suitcases":
+                 elif look_choice == "suitcases":
                      input("Six bags make a sort of obstacle course between the door and everything else in the goddamn room. Clothes spilling out everywhere. There's a few notebooks and bits of art supplies to add to the tripping hazards. Seems like they've been here for a hot second.")
                      look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   BUREAU   SUITCASES   BACK\n{Style.RESET_ALL}").lower()
-                 if look_choice == "back":
+                 elif look_choice == "back":
                      bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
                  else:
                      print("...try that again...")
                      look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   BUREAU   SUITCASES   BACK\n{Style.RESET_ALL}").lower()
              if look_choice == "back":
-                   bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+                action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
              else:
                 print("...try that again...")
                 look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   BUREAU   SUITCASES   BACK\n{Style.RESET_ALL}").lower()
@@ -499,11 +544,11 @@ def bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, use
         move_choice = input(f"{Fore.BLUE}Where would you like to go? \n BATHROOM   LIVINGROOM   BACK\n{Style.RESET_ALL}").lower()
         if move_choice == "bathroom":
             bathroom_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-        if move_choice =="patio":
+        elif move_choice =="patio":
             patio(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-        if move_choice == "dining":
+        elif move_choice == "dining":
             diningroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-        if move_choice == "livingroom":
+        elif move_choice == "livingroom":
             livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
 
     else:
@@ -531,11 +576,11 @@ def patio(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_
                         print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PATIO   PLANTERS   PERSON   BACK\n{Style.RESET_ALL}").lower()
 
-                if look_choice == "planters":
+                elif look_choice == "planters":
                     input("I've never been one for gardening, to tell ya the truth. These plants are just leaves and flowers to me. Green spikes, pink trumpets, your typical Home Depot Garden Center fair. Pretty, you could say.")
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PATIO   PLANTERS   PERSON   BACK\n{Style.RESET_ALL}").lower()
 
-                if look_choice == "person":
+                elif look_choice == "person":
                     input("She looks pale, sweaty, and I don't think that's just the stress of a coding final. She keeps rifling through the flowers, picking out brown and green bits just to throw them on the lawn.")
                     input("She's got a shaky hand, but a steadfast pruning method. Might be plant's aren't the only thing she's chopped tonight.")
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PATIO   PLANTERS   PERSON   BACK\n{Style.RESET_ALL}").lower()
@@ -545,7 +590,7 @@ def patio(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_
                     look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PATIO   PLANTERS   PERSON   BACK\n{Style.RESET_ALL}").lower()
 
             if look_choice == "back":
-                patio(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+                action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
 
             else:
                 print("Gonna need ya to slow down and type more clearly, kid.")
@@ -566,7 +611,7 @@ def patio(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_
         move_choice = input(f"{Fore.BLUE}Where would you like to go? \n LIVINGROOM   BACK\n{Style.RESET_ALL}").lower()
         if move_choice == "back":
             patio(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-        if move_choice == "livingroom":
+        elif move_choice == "livingroom":
             livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
         else:
             "Huh? Where?"
@@ -594,10 +639,10 @@ def diningroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
                 if look_choice == "person":
                     input("She seems... content. Strange when there's a body in the other room.")
                     input("She's sitting, sketching in a book that's already nearly full. Magical girls in every color on the spread she's working on, all wearing witch hats... spooky.")
-                if look_choice == "beds":
+                elif look_choice == "beds":
                     input("There's nont much to these so-called 'beds'. Its pretty clear that they were expecting more sleeping spaces than they got. These beds are looking like a game jam game with no artists: random assets thrown together to try and make something work.")
                     input("Couch cushions, towels, curtains, all to fill in where the bed count failed. They've been spending the nights in here, sure, but with beds like this, no one's been getting any shuteye.")
-                if look_choice=="back":
+                elif look_choice=="back":
                     action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
                 else:
                     print("I'm going to level with ya, I have no clue what that means.")
@@ -630,9 +675,9 @@ def diningroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
         move_choice = input(f"{Fore.BLUE}Where would you like to go? \n LIVINGROOM   KITCHEN   BACK\n{Style.RESET_ALL}").lower()
         if move_choice == "livingroom":
             livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-        if move_choice =="kitchen":
+        elif move_choice =="kitchen":
             kitchen(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-        if move_choice == "back":
+        elif move_choice == "back":
             diningroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
         else:
             print("...try that again...")
@@ -656,7 +701,7 @@ def bathroom_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracke
                     input("Damn. Gonna be tougher than I thought. Might need to look around more.")
                     door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK\n{Style.RESET_ALL}").lower()
 
-            if door_choice == "use" and len(inventory) == 0:
+            elif door_choice == "use" and len(inventory) == 0:
                 print("Nothing in my pockets but lint. Looks like I'll have to look around some more to get through here.")
                 door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK\n{Style.RESET_ALL}\n").lower()
 
@@ -702,16 +747,23 @@ def kitchen_panel(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracke
         input("I press on the panel and it shifts just a bit, doesn't do much more. It'll have to come off the wall if I wanna get behind it. Should be something around here I can use to break the seal.")
         door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK{Style.RESET_ALL}\n").lower()
         while door_choice != "back":
-            if door_choice == "use":
+            if door_choice == "use" and len(inventory)>0:
                 use_choice = input(f"{Fore.BLUE}What would you like to use on the wall panel? {inventory}{Style.RESET_ALL} \n").lower()
                 doorStat = isLocked ("kitchen panel", "knife", use_choice, inventory, used_items)
                 if doorStat:
                     input("Perfect. This knife ougtta do the job. I slip the blade into the crack between the wall and the panel. It comes loose with a waft of damp, stale air. It's a tunnel. What kinda pervert house...")
                     bathroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-                    break
                 else:
                     input("Damn. Gonna be tougher than I thought. Might need to look around more.")
                     door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK{Style.RESET_ALL} \n").lower()
+            elif door_choice == "use" and len(inventory)==0:
+                print("Nothing in my pockets. I'll have to remember this when I find something useful.")
+                door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK{Style.RESET_ALL}\n").lower()
+            
+            else:
+                print("What did you type?")
+                door_choice = input(f"{Fore.BLUE}What would you like to do?\nUSE   BACK{Style.RESET_ALL}\n").lower()
+
         if door_choice == "back":
             kitchen(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
             
@@ -737,7 +789,7 @@ def bathroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, us
                     notes_taken.append("A strong bleach smell in the bathrom indicates a very recent cleaning job.")
                 look_choice = input(f"{Fore.BLUE}What would you like to look at? \n WINDOW   WALLS   PLUMBING   BACK\n{Style.RESET_ALL}").lower()
 
-            if look_choice == "window" and "troutWhen" not in npc_tracker:
+            elif look_choice == "window" and "troutWhen" not in npc_tracker:
                 input("It's open, probably to deal with the bleach aroma. Would AirBnb hosts use THIS much chemical to clean a bathroom, with new guests coming in so soon? I would hate to see what happened in here if that's the case.")
                 input("No, can't be the case. There must be something else here.")
                 if "A strong bleach smell in the bathrom indicates a very recent cleaning job." not in notes_taken:
@@ -746,12 +798,12 @@ def bathroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, us
             
                 look_choice = input(f"{Fore.BLUE}What would you like to look at? \n WINDOW   WALLS   PLUMBING   BACK\n{Style.RESET_ALL}").lower()
 
-            if look_choice == "walls":
+            elif look_choice == "walls":
                 input("They certainly did a number on this paint job. Drips of off-white paint on every surface. Streaky roller marks from floor to ceiling. There's one squarish-patch of drywall that's a slightly different color.")
                 look_choice = input(f"{Fore.BLUE}What would you like to look at? \n WINDOW   WALLS   PATCH   PLUMBING   BACK\n{Style.RESET_ALL}").lower()
-            if look_choice == "patch":
+            elif look_choice == "patch":
                 secret_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-            if look_choice == "plumbing":
+            elif look_choice == "plumbing":
                 input("A pretty standard fair plumbing job. Pex on the sink, chrome on the tub, that sorta thing. Messy finishing, but, I guess, functional. There is one thing that sticks out, literally and figuratively.")
                 input("About a half inch of CPVC pokes out of the wall, uncapped, open to all the bathroom elements. Or... opening the bathroom to all the pipe elements. What sorta plumbing job is that...")
                 if "There is an uncapped and unexplained pipe in the wall of the bathroom." not in notes_taken:
@@ -775,15 +827,15 @@ def bathroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, us
             move_choice = input(f"{Fore.BLUE}Where would you like to go? \nBEDROOM   TUNNEL   BACK\n{Style.RESET_ALL}").lower()
             if move_choice == "bedroom":
                 bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-            if move_choice =="tunnel":
+            elif move_choice =="tunnel":
                 secrettunnel(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-            if move_choice == "back":
+            elif move_choice == "back":
                 bathroom_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
         else:
             move_choice = input(f"{Fore.BLUE}Where would you like to go? \nBEDROOM   BACK\n{Style.RESET_ALL}").lower()
             if move_choice == "bedroom":
                 bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
-            if move_choice =="back":
+            elif move_choice =="back":
                 bathroom_door(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
 
 def kitchen(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
@@ -793,43 +845,68 @@ def kitchen(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, use
     if "kitchen" not in visited_rooms:
         visited_rooms.append("kitchem")
     action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
+    if action != "move":
+        if action == "look":
+            look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   COUNTERS   WALLS   BACK\n{Style.RESET_ALL}").lower()
 
-    if action == "look":
-        look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   COUNTERS   WALLS   BACK\n{Style.RESET_ALL}").lower()
+            while look_choice != "back":
+                if look_choice == "counters":
+                    location = "counters"
+                    counter_contents = ["spatula", "ladle", "knife", "bowl", "napkins"]
+                    input("Formica, new. Plenty of gadgets on there, I guess laid out so our coding chef here can make quicker work of his dish. Let's see what we've got here.")
+                    take_object(counter_contents, location, inventory)
+                    look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   COUNTERS   WALLS   BACK\n{Style.RESET_ALL}").lower()
 
-        while look_choice != "back":
-            if look_choice == "counters":
-                location = "counters"
-                counter_contents = ["spatula", "ladle", "knife", "bowl", "napkins"]
-                input("Formica, new. Plenty of gadgets on there, I guess laid out so our coding chef here can make quicker work of his dish. Easy access, and all. Let's see what we've got here.")
-                take_object(counter_contents, location, inventory)
-                look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   COUNTERS   WALLS   BACK\n{Style.RESET_ALL}").lower()
+                elif look_choice == "person":
+                    input("He's hard at work, stirring here, chopping there. All with his back to me, so I can't quite grok what he's cooking, but I know it smells good.")
+                    input("His focus is unbroken when I walk in. He's stress cooking, I'm sure of it, and while I hope it doesn't throw off his flavor game, I wouldn't mind if it tripped him up on the interrogation front.")
+                    look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   COUNTERS   WALLS   BACK\n{Style.RESET_ALL}").lower()
 
-            if look_choice == "person":
-                input("He's hard at work, stirring here, chopping there. All with his back to me, so I can't quite grok what he's cooking, but I know it smells good.")
-                input("His focus is unbroken when I walk in. He's stress cooking, I'm sure of it, and while I hope it doesn't throw off his flavor game, I wouldn't mind if it tripped him up on the interrogation front.")
-                look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   COUNTERS   WALLS   BACK\n{Style.RESET_ALL}").lower()
+                elif look_choice == "walls":
+                    input("Slightly grease-stained, HGTV Grey, figures.")
+                    input("Lots of cabinets, though. Tools, pots, pans, all hanging from hooks for easy access. Stock images of scenery framed in tasteful spaces. But...")
+                    if "bathroom" in visited_rooms:
+                        input("There it is again. Another loose drywall panel, just like the one in the bathroom. Either these hosts need a handy man or something odd is going on here.")
+                    else:
+                        input("There's an odd panel of drywall over there. Looks like it's been patched and repatched, but recently loosened again.")
+                    look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   COUNTERS   WALLS   PANEL   BACK\n{Style.RESET_ALL}").lower()
 
-            if look_choice == "walls":
-                input("Slightly grease-stained, HGTV Grey, figures.")
-                input("Lots of cabinets, though. Tools, pots, pans, all hanging from hooks for easy access. Stock images of scenery framed in tasteful spaces. But...")
-                if "bathroom" in visited_rooms:
-                    input("There it is again. Another loose drywall panel, just like the one in the bathroom. Either these hosts need a handy man or something odd is going on here.")
+                elif look_choice == "panel":
+                    kitchen_panel(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+
                 else:
-                    input("There's an odd panel of drywall over there. Looks like it's been patched and repatched, but recently loosened again.")
-                look_choice = input(f"{Fore.BLUE}What would you like to look at? \n PERSON   COUNTERS   WALLS   PANEL   BACK\n{Style.RESET_ALL}").lower()
+                    print("What was that? Type it again!")
+                    look_choice = input(f"{Fore.BLUE}What would you like to look at? \nPERSON   COUNTERS   WALLS   BACK\n{Style.RESET_ALL}").lower()
 
-            if look_choice == "panel":
-                kitchen_panel(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+            if look_choice == "back":
+                kitchen(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+        if action == "talk":
+            if "Xavier" not in npcs_spoken:
+                npcs_spoken.append("Xavier")
 
-            else:
-                print("What was that? Type it again!")
-                look_choice = input(f"{Fore.BLUE}What would you like to look at? \n BODY   PERSON   DESK   TABLE   CABINET   BACK\n{Style.RESET_ALL}").lower()
+            input("I decide it's my time to interject: 'Whatcha cookin?'")
+            input(f"{Fore.LIGHTBLACK_EX}Chili. It'll probably be done in... 10 minutes?{Style.RESET_ALL}")
+            input("'You still hungry on a night like this? With a body in your living room?'")
+            input("He turns from the stove to look at me, takes a lick off his tasting spoon.")
+            input(f"{Fore.LIGHTBLACK_EX}It's not my living room.{Style.RESET_ALL}")
+            nextStep = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHY   BACK\n{Style.RESET_ALL}").lower()
+            Xavier_dialogue(nextStep, notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items)
 
-        if look_choice == "back":
+        else:
+            print("What does that even mean? Let's try this all again.")
             kitchen(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
 
 
+    elif action == "move":
+        move_choice = input(f"{Fore.BLUE}Where would you like to go? \nDINING   BACK\n{Style.RESET_ALL}").lower()
+        if move_choice == "dining":
+            diningroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+        elif move_choice == "back":
+            kitchen(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+        else:
+            print("What was that? Type it again!")
+            move_choice = input(f"{Fore.BLUE}Where would you like to go? \nDINING   BACK\n{Style.RESET_ALL}").lower()
+        
 def secrettunnel(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
     print("tunnel")
     input(f"\n{Fore.RED} THE TUNNEL {Style.RESET_ALL}")
@@ -844,9 +921,11 @@ def start_mystery(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracke
     print(f"\n{Fore.RED} CODE RED MYSTERIES {Style.RESET_ALL}presents...")
     input(f"{Fore.BLUE} THE CASE OF THE TA TERMINATOR {Style.RESET_ALL}\n")
 
-    input("The flatfoots are already there by the time I roll up, standing around outside like a bunch of unused variables in a begginner's CS1 project. I spot the chief leaning against her cruiser.")
+    input("The flatfoots are already stationed outside the AirBnb by the time I roll up, standing around like a bunch of unused variables in a begginner's CS1 project. I spot the chief leaning against her cruiser.")
     input("I ask her what's on everyone's mind. 'What's the situation in there, chief?' \nShe sighs, pulls out a pack of cigs from her shirt pocket.")
-    input(f"{Fore.LIGHTBLACK_EX}One dead, five suspects. We've got the perimeter covered, you just have to go in and figure out who to book. Easy right?{Style.RESET_ALL}")
+    input(f"{Fore.LIGHTBLACK_EX}One dead, five suspects. Victim up and keeled over with sudden flu-like symptoms.{Style.RESET_ALL}")
+    input("'And that's grounds for a murder investigation? The flu?'")
+    input(f"{Fore.LIGHTBLACK_EX}Get in there, start asking around. You'll see it ain't so cut and dry, detective.\nWe've got the perimeter covered, you just have to go in and figure out who to book. \nOnce you've spoken to all the suspects, gather us up in the living room and make your case. Easy right?{Style.RESET_ALL}")
     input("'As python.' I chuckle. She takes a drag. Figures.")
     input("I guess that's my cue to get the investigation started.\n")
     livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
