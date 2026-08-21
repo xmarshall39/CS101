@@ -105,8 +105,10 @@ def Ofelia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, 
         print("English, Einstein! I didn't understand ya!")
         choice= input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHEN   WHERE   WHY   BACK\n{Style.RESET_ALL}").lower()
 
-def Ofelia_accuse(choice, notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
+def Ofelia_accuse(notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
     input("'Ofelia...'")
+    end_mystery(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
+    
 def Julia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
     while choice != "back":
         if choice == "who":
@@ -165,7 +167,7 @@ def Julia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
         print("What was that?")
         choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHY   BACK\n{Style.RESET_ALL}").lower()
 
-def Julia_accuse(choice, notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
+def Julia_accuse( notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
     input("'Julia. Our last remaining TA.'")
     input(f"{Fore.LIGHTBLACK_EX}Well, kinda.{Style.RESET_ALL}")
     end_mystery(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
@@ -225,7 +227,7 @@ def Chloe_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
         print("Listen, I can't understand ya when you type like that.")
         choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT  WHY   BACK\n{Style.RESET_ALL}").lower()
 
-def Chloe_accuse(choice, notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
+def Chloe_accuse(notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
     input("'Cleo.'")
     input(f"{Fore.LIGHTBLACK_EX}CHLOE!{Style.RESET_ALL}")
     input("'Right, Chloe. Can't imagine the knid of anger you must feel when people get your name wrong.'")
@@ -443,7 +445,7 @@ def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
     if "living room" not in visited_rooms:
         visited_rooms.append("living room")
     action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE   ACCUSE  NOTES\n{Style.RESET_ALL}").lower()
-    if action != "move":
+    while action != "move":
         if action == "talk":
             if "Ofelia" not in npcs_spoken:
                 npcs_spoken.append("Ofelia")
@@ -513,29 +515,41 @@ def livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
 
         elif action == "accuse" and len(npcs_spoken)>=5:
             input(f"{Fore.GREEN}Once you accuse someone of the crime, there's no going back!{Style.RESET_ALL}")
-            accuse_confirm=input(f"{Fore.BLUE}Are you sure you'd like to proceed to the accusations? \n YES   NO{Style.RESET_ALL}").lower()
+            accuse_confirm=input(f"{Fore.BLUE}Are you sure you'd like to proceed to the accusations? \n YES   NO\n{Style.RESET_ALL}").lower()
             if accuse_confirm == "yes":
                 input("Alright. I've seached the house. I've questioned the suspects. I've got all my notes together and, most importantly, I've got a case.")
-                input("I open the door, wave the chief over. She stomps out her cig with a sigh.")
+                input("I open the front door, wave the chief over. She stomps out her cig.")
                 input(f"{Fore.LIGHTBLACK_EX}You got any idea what went down in there? {Style.RESET_ALL}")
                 input("'I got some ideas, but none of em are pretty. Let's get the suspects together. I'm sure they're all dying to hear what I came up with.''")
                 input("The chief sighs and brushes past me. Figures.")
                 input("It's time to close the case.")
 
-                guilty_guess = input(f"{Fore.BLUE}Who would you like to implicate in the murder of Coli the TA? \nOFELIA   TROUT   CHLOE   JULIA   XAVIER").lower()
-                input("'Well, folks. What a night.'")
-                input("'I suppose I oughtta start by thanking you all for your cooperation. Lots of questions to be asked with your friend lying dead in the living room. Former friend, I should say.'")
-                input("'Fact of the matter is, this is a murder investigation, which means one of you's a murderer. So why don't we just rip off the bandaid, huh? I've looked around, collected the evidence, and now it's time to wrap it all up.'")
+                guilty_guess = input(f"{Fore.BLUE}Who would you like to implicate in the murder of Coli the TA? \nOFELIA   TROUT   CHLOE   JULIA   XAVIER\n{Style.RESET_ALL}").lower()
                 if guilty_guess == "ofelia":
-                    print("OPHELIA GUESS")
+                    input("'Well, folks. What a night.'")
+                    input("'I suppose I oughtta start by thanking you all for your cooperation. Lots of questions to be asked with your friend lying dead in the living room. Former friend, I should say.'")
+                    input("'Fact of the matter is, this is a murder investigation, which means one of you's a murderer. So why don't we just rip off the bandaid, huh? I've looked around, collected the evidence, and now it's time to wrap it all up.'")
+                    Ofelia_accuse(notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items)
                 elif guilty_guess == "trout":
-                    print("TROUT GUESS")
+                    input("'Well, folks. What a night.'")
+                    input("'I suppose I oughtta start by thanking you all for your cooperation. Lots of questions to be asked with your friend lying dead in the living room. Former friend, I should say.'")
+                    input("'Fact of the matter is, this is a murder investigation, which means one of you's a murderer. So why don't we just rip off the bandaid, huh? I've looked around, collected the evidence, and now it's time to wrap it all up.'")
+                    Trout_accused(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
                 elif guilty_guess == "chloe":
-                    print("CHLOE GUESS")
+                    input("'Well, folks. What a night.'")
+                    input("'I suppose I oughtta start by thanking you all for your cooperation. Lots of questions to be asked with your friend lying dead in the living room. Former friend, I should say.'")
+                    input("'Fact of the matter is, this is a murder investigation, which means one of you's a murderer. So why don't we just rip off the bandaid, huh? I've looked around, collected the evidence, and now it's time to wrap it all up.'")
+                    Chloe_accuse(notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items)
                 elif guilty_guess == "julia":
-                    print("JULIA GUESS")
+                    input("'Well, folks. What a night.'")
+                    input("'I suppose I oughtta start by thanking you all for your cooperation. Lots of questions to be asked with your friend lying dead in the living room. Former friend, I should say.'")
+                    input("'Fact of the matter is, this is a murder investigation, which means one of you's a murderer. So why don't we just rip off the bandaid, huh? I've looked around, collected the evidence, and now it's time to wrap it all up.'")
+                    Julia_accuse( notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items)
                 elif guilty_guess == "xavier":
-                    print("XAVIER GUESS")
+                    input("'Well, folks. What a night.'")
+                    input("'I suppose I oughtta start by thanking you all for your cooperation. Lots of questions to be asked with your friend lying dead in the living room. Former friend, I should say.'")
+                    input("'Fact of the matter is, this is a murder investigation, which means one of you's a murderer. So why don't we just rip off the bandaid, huh? I've looked around, collected the evidence, and now it's time to wrap it all up.'")
+                    Xavier_accused(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
                 else:
                     print("Seriously? Our big moment and you're making me look bad! Type something legible, for God's sake!")
                     guilty_guess = input(f"{Fore.BLUE}Who would you like to implicate in the murder of Coli the TA? \nOFELIA   TROUT   CHLOE   JULIA   XAVIER").lower()
