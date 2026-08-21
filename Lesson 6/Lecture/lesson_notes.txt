@@ -1,0 +1,69 @@
+SETS
+
+- Collection
+- Similar to lists
+- Store unique elements
+
+[0, 1, 2, 3, 4, 5, 6, 7] => specific order, use indexes
+{0, 1, 2, 3, 4, 5, 6, 7} => unordered (randomish), no indexes, unique
+{0, 1, 6, 2, 3, 5, 4, 7}
+
+x = {1, 2, 3, 4, 5}
+y = {5, 6, 7, 8, 9}
+z = {1, 2, 3}
+
+UNION
+x.union(y) => {1, 2, 3, 4, 5, 6, 7, 8, 9}
+INTERSECTION
+x.intersection(y) => {5}
+DIFFERENCE
+x.difference(y) => {1, 2, 3, 4}
+
+HASH FUNCTION
+"hello"
+a = {"hello", "goodbye", ...}
+
+["hello", ...........]
+
+
+DICIONARY
+Key-Value Pairs
+"Television" : ["A box used to show brain draining media", "noun", "tel - e -vizionnnn"]
+
+x = {190 : ["fred", 0],/
+180 : ["velma", 0],/
+999 : ["scooby", 999]}
+
+traits = {"fred" : "traps",
+"velma" : "glasses",
+"scooby" : "dog"}
+
+reverse_traits = {
+"traps" : "fred",
+"glasses" : "velma,
+"god" : "scooby"
+}
+
+traits["fred"]
+if "glasses" in reverse_traits:
+
+if "glasses" in traits.values():
+
+f = x[190]
+x.add(100, ["daphne", 8])
+x[100] = ["daphne", 8]
+x.remove(100)
+d = x[100]
+
+for employee in x.values():
+	#employee => ["fred", 3]
+	print(employee[1])
+for id in x.keys():
+	#id => 190
+	print(x[id][1])
+for kvp in x.items():
+	# kvp => (190, ["fred, 3])
+
+#fred pink slips
+if len(x[190]) > 1:
+	PRINT(x[190][1])
