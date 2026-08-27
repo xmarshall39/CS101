@@ -107,6 +107,22 @@ def Ofelia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, 
 
 def Ofelia_accuse(notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
     input("'Ofelia...'")
+    input(f"{Fore.LIGHTBLACK_EX}Yeah?{Style.RESET_ALL}")
+    input("'You're under arrest for the murder of Coli the Coding TA.'")
+    input(f"{Fore.LIGHTBLACK_EX}What? Why me??{Style.RESET_ALL}")
+    input("'Because you were the closest to the body whn I walked in and also had the most dialogue options, so you knew the most about the murder. Must be you did it.'")
+    input("The long silence that that followed my announcement was less than encouraging. The police chief stepped up to end it with an angry whisper.")
+    input(f"{Fore.LIGHTBLACK_EX}You been sniffing glue or something, detective? Tell me you've got more dirt on her than that.{Style.RESET_ALL}")
+    input("The second long silence was somehow even less encouraging than the first.")
+    input(f"{Fore.LIGHTBLACK_EX}Sorry about all this, folks. Seems our detective here is a bit out of their depth. We'll wrap this up, get the paperwork done, and let you all get to bed.{Style.RESET_ALL}")
+    input("And with that, the police chief led me unceremoniously out of the AirBnb.")
+    input(f"{Fore.RED}\n THE EPILOGUE\n {Style.RESET_ALL}")
+    input("Well, that was not my best showing, I'll be the first to admit it. Not sure what I was thinking there.")
+    input("Needless to say, that particular coding crime precinct did not ask me back. I'd like to think it's because there weren't any more coding murders but... I'm more inclined to believe they lost my number down the shredder.")
+    input("Figures.")
+    input(f"{Fore.BLUE}Good try, detective, but this just wasn't your night.{Style.RESET_ALL}")
+
+
     end_mystery(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
     
 def Julia_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
@@ -229,13 +245,25 @@ def Chloe_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
 
 def Chloe_accuse(notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items):
     input("'Cleo.'")
-    input(f"{Fore.LIGHTBLACK_EX}CHLOE!{Style.RESET_ALL}")
+    input(f"{Fore.LIGHTBLACK_EX}...Chloe...{Style.RESET_ALL}")
     input("'Right, Chloe. Can't imagine the knid of anger you must feel when people get your name wrong.'")
     input("'Or maybe I can...'")
     input("'It only got worse once you got involved with this group, huh? Chloe, Coli, Chloe, Coli. Tough to set yourself apart, especially over a Discord call.'")
     input("'You know what I think, Chili? I think you finally snapped, and when this whole get-together was planned, you saw your chance to eliminate the one person that stood in your name's way.'")
     input("'You knew there was a way to do it quick, leave hardly any trace. You weaponized your plant knowledge, knew it'd be a simple Google to find toxic flora that could take Coli out. Your plan all came together when you saw that moldy patio.'")
     input("'Wasn't nuthin' to scrape up some of that mold, to swipe the air mattress pump, and use the secret passage way from the kitchen to the bathroom to fill it up with airborne spores. Just in time for Coli to take a rest-stop.'")
+    input("'Then you run in with the bleach, clean up as much as you can, and run back through the tunnel. All to watch your work in action and run out on the patio once the heat started knocking on the door.'")
+    input(f"{Fore.LIGHTBLACK_EX}What? You think I killed Coli with some random mold just because our names sound similar?")
+    input(f"'Chloe' is, like, one of the top baby names of 1999! Not to mention all the names that sound similar to it! You think I Resident-Evil-ed all those people, too?{Style.RESET_ALL}")
+    input("'Save any further admissions for the judge, Chole. Officer, if you'd please do the honors.'")
+    input(f"{Fore.RED}\n THE EPILOGUE\n {Style.RESET_ALL}")
+    input("Well, after a hard night's work of detecting. Chloe was led away in cuffs to await trial, where it was all revealed...")
+    input("The mold on the patio had indeed been the cause of death, and traces of it could be found in the air mattress pump and in the pipe leading into the bathroom.")
+    input("After long hours of cross examining and fact-checking it turned out that Chloe had long been involved with other Chloe's, Coli's, Zoeys, and Coles. Every one of em was either still alive, or had passed of natural, non-mold related causes.")
+    input("Character references from the other coders as well as non-coder relatives confirm that she is infamously chickenshit, and liable to pass out at witnessing any health disaster in her vicinity. The likelihood of her causing such a disaster, therefore risking her own health, was deemed improbable.")
+    input("The jury dubbed her 'Not Guilty' and she was released to code again. The case, to this day, remains..")
+    input(f"{Fore.RED}a mystery. {Style.RESET_ALL}")
+    input(f"{Fore.BLUE}Good try, detective, but this just wasn't your night.{Style.RESET_ALL}")
 
     end_mystery(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
 
@@ -243,9 +271,9 @@ def Trout_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
     while choice != "back":
         if choice == "who":
             input("'Tell me, Trout. Who was in the room to actually witness the murder?'")
-            input(f"{Fore.LIGHTBLACK_EX}Well, I saw Coli go down after she got up from her desk. Ofelia was quick to her feet, though. She was the first to see what was wrong. \nXavier got on the phone with 911 as soon as he could. And Chloe went outside. Said something about feeling faint.{Style.RESET_ALL}")
+            input(f"{Fore.LIGHTBLACK_EX}Well, I saw Coli go down after she got up from her desk. Ofelia was the first that got up to see what was wrong. \nXavier got on the phone with 911 as soon as he could. And Chloe went outside. Said something about feeling faint.{Style.RESET_ALL}")
             input("'That's all well and good, kid, but your math ain't addin' up. You only accounted for five coders, where's the sixth?'")
-            input(f"{Fore.LIGHTBLACK_EX}Oh yeah, Julia. She was in the kitchen at the time getting a snack, came out just before the police came.{Style.RESET_ALL}")
+            input(f"{Fore.LIGHTBLACK_EX}Fine, fine... Julia. She was in the kitchen getting a snack, came out just before the police came.{Style.RESET_ALL}")
 
             if "Julia was in the kitchen when Coli met her untimely demise." not in notes_taken:
                 print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
@@ -261,7 +289,7 @@ def Trout_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
             input("'When did you guys get here? I mean, how long have you been staying here?'")
             input(f"{Fore.LIGHTBLACK_EX}Two days ago. We've just been hanging out, only got to the final tonight.{Style.RESET_ALL}")
             input("'Anything happen while you kids were just 'hanging out'?'")
-            input(f"{Fore.LIGHTBLACK_EX}Not that I can think of... We had a great time, no problems.{Style.RESET_ALL}") 
+            input(f"{Fore.LIGHTBLACK_EX}No. We were all fine, no problems.{Style.RESET_ALL}") 
             choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHEN   WHY   BACK\n{Style.RESET_ALL}").lower()
             if "troutWhen" not in npc_tracker:
                 npc_tracker.append("troutWhen")
@@ -303,7 +331,27 @@ def Trout_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, n
         choice= input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHEN   WHERE   WHY   BACK\n{Style.RESET_ALL}").lower()
 
 def Trout_accused(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
-    input("Why don't we talk about you, my fishy friend?")
+    input("'Why don't we talk about you, my fishy friend?'")
+    input(f"{Fore.LIGHTBLACK_EX}No, this is ridiculous! I'm going back to bed.{Style.RESET_ALL}")
+    input("'That's just it with you, isn't it? Hate being told what to do, huh?'")
+    input("'So when Coli came into class, giving suggestions, making assignments, TA things, it got under your skin.'")
+    input("This stops him in his tracks, and he turns back around.")
+    input("'You write a 'Blow Up Coli' function 'just to be funny'. And sure, the class laughs, you sickos build it up, make it a running gag. But it wasn't just a gag to you, was it?'")
+    input("'The idea was planted, and you did some research about the flora of the area. Wrote up all sorts of formulas in that sketchbook of yours, but you left your work at the scene of the crime.'")
+    input("I pull out the sketchbok page I found in the secret tunnel. Irrefutable evidence.")
+    input("'The night of the last class, the last chance Coli would have to be your TA, you decide you're going to get ahead of it. She takes a rest-stop, you pump it full of toxic mold you scraped up from the patio with that kitchen knife. And bam, no more being told what to do.'")
+    input(f"{Fore.LIGHTBLACK_EX}You've got to be fucking kidding! If I wanted to kill every one 'telling me what to do' then why not take Xavier out, too? He's the teacher!{Style.RESET_ALL}")
+    input("'You signed up for the class, you knew you'd be listening to him. Coli was an added authority you weren't counting on.'")
+    input("'But it doesn't matter what you didn't do, just what you did. And you can fill the judge in when you see her.'")
+
+    input(f"{Fore.RED}\n THE EPILOGUE\n {Style.RESET_ALL}")
+    input("Well, after a hard night's work of detecting. Trout was led away in cuffs to await trial, where it was all revealed...")
+    input("The mold on the patio had indeed been the cause of death, and traces of it could be found in the air mattress pump and in the pipe leading into the bathroom.")
+    input("But the sketchbook page found in the secret tunnel did not match the weight of the paper in Trout's sketchbook, nor did there seem to be any pages missing or traces of math in said sketchbook.")
+    input("It also turns out that Trout's resistance to authority was... reserved for random people coming in and accusing him of murdering his recently passed friend. No character witnesses ever reported him as being particularly difficult in the face of being told what to do.")
+    input("The jury dubbed him 'Not Guilty' and he was released to code again. The case, to this day, remains..")
+    input(f"{Fore.RED}a mystery. {Style.RESET_ALL}")
+    input(f"{Fore.BLUE}Good try, detective, but this just wasn't your night.{Style.RESET_ALL}")
 
     end_mystery(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
 
@@ -331,6 +379,7 @@ def Xavier_dialogue(choice, notes_taken, inventory, visited_rooms, npcs_spoken, 
                 input(f"{Fore.LIGHTBLACK_EX}Bailing on a free, voluntary coding class that I hosted to help with free, voluntary game jams? Yeah, I think I'll be alright.{Style.RESET_ALL}.")
                 if "Xavier kept track of attendance to his classes, and Coli was the first to drop out." not in notes_taken:
                     notes_taken.append("Xavier kept track of attendance to his classes, and Coli was the first to drop out.")
+                    print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
                 choice = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHAT   WHEN   WHY   BACK\n{Style.RESET_ALL}").lower()
 
 
@@ -387,6 +436,12 @@ def take_object (objects, location, inventory):
                 input(f"Could be helpful, I think I'll put this {object_take} in my pocket.")
                 print(f"{Fore.GREEN} You have added {object_take} to your inventory.{Style.RESET_ALL}")
                 take_affirm = input(f"{Fore.BLUE}Would you like to add one of these objects to your inventory?   YES   NO\n{Style.RESET_ALL}").lower()
+                if object_take == "knife":
+                    input("This knife looks clean but... well used, and not just on vegetables. It's got large scrapes along the blade and a scuffed edge. It certainly got dragged across a rough surface, and a hard one at that.")
+                    if "The kitchen knife was used across a hard, rough surface and then cleaned." not in notes_taken:
+                        notes_taken.append("The kitchen knife was used across a hard, rough surface and then cleaned.")
+                        print(f"{Fore.GREEN}You have added this to your notes.{Style.RESET_ALL}")
+      
             else:
                 print(f"Did I ever mention {object_take}? NO!")
                 object_take = input(f"{Fore.BLUE}Which object will you take? {objects}\n{Style.RESET_ALL}").lower()
@@ -593,15 +648,16 @@ def bedroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, use
                 npcs_spoken.append("Trout")
             if "ofeliaWhere" in npc_tracker:
                 input("'You must be Trout, huh?' I ask, tripping over the baggage on the floor.")
-                input(f"{Fore.LIGHTBLACK_EX}What? Oh... yeah, I'm Trout.{Style.RESET_ALL}")
+                input(f"{Fore.LIGHTBLACK_EX}What's it matter to you? Who are you, anyway?{Style.RESET_ALL}")
                 input("I'm looking into the murder of Coli. Y'know, your friend.")
-                input("He finally puts down his pen and sits up. Now, I've got his attention.")
+                input("He finally puts down his pen and sits up. Now, I've got his attention and, hopefully, his cooperation.")
             else:
-                input("'You must be Mr...'")
-                input(f"{Fore.LIGHTBLACK_EX}Trout. Just Trout. {Style.RESET_ALL}")
-                input("'Right. Trout. Well, Trout, I'm looking into the murder of Coli. Y'know, your friend.'")
-                input("He finally puts down his pen and sits up. Now, I've got his attention.")
-            
+                input("'You must be...'")
+                input(f"{Fore.LIGHTBLACK_EX}Don't know why it'd be important to you. How'd you even get in here?{Style.RESET_ALL}")
+                input("'I'm looking into the death of Coli. Y'know, your friend.'")
+                input("He finally puts down his pen and sits up. Now, I've got his attention and, hopefully, his cooperation.")
+                input(f"{Fore.LIGHTBLACK_EX}I'm Trout. Just Trout. {Style.RESET_ALL}") 
+
             nextStep = input(f"{Fore.BLUE}Pick a topic to talk about,\n WHO   WHEN  WHY   BACK\n{Style.RESET_ALL}").lower()
             Trout_dialogue(nextStep, notes_taken, inventory, visited_rooms, npcs_spoken, npc_tracker, used_items)
 
@@ -742,8 +798,8 @@ def diningroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, 
                     input("She seems... content. Strange when there's a body in the other room.")
                     input("She's sitting, sketching in a book that's already nearly full. Magical girls in every color on the spread she's working on, all wearing witch hats... spooky.")
                 elif look_choice == "beds":
-                    input("There's nont much to these so-called 'beds'. Its pretty clear that they were expecting more sleeping spaces than they got. These beds are looking like a game jam game with no artists: random assets thrown together to try and make something work.")
-                    input("Couch cushions, towels, curtains, all to fill in where the bed count failed. They've been spending the nights in here, sure, but with beds like this, no one's been getting any shuteye.")
+                    input("There's not much to these so-called 'beds'. Its pretty clear that they were expecting more sleeping spaces than they got. These beds are looking like a game jam game with no artists: random assets thrown together to try and make something work.")
+                    input("Couch cushions, towels, curtains, all to fill in where the bed count failed. After kicking around a bit, I uncover a single air mattress, half deflated. They've been spending the nights in here, sure, but with beds like this, no one's been getting any shuteye.")
                 elif look_choice=="back":
                     action = input(f"{Fore.BLUE}What would you like to do?\n LOOK  TALK  MOVE  NOTES\n{Style.RESET_ALL}").lower()
                 else:
@@ -1105,7 +1161,7 @@ def start_mystery(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracke
     livingroom(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items)
 
 def end_mystery(inventory, visited_rooms, npcs_spoken, notes_taken, npc_tracker, used_items):
-    input(f"{Fore.BLUE}CONGRATULATIONS! YOU HAVE WRAPPED UP THE CASE OF THE TA TERMINATOR!")
+    input(f"{Fore.BLUE}YOU HAVE WRAPPED UP THE CASE OF THE TA TERMINATOR!")
     input("You took a lot of steps, today! You visited the following rooms: ")
     for i in range(len(visited_rooms)):
         print("-"+visited_rooms[i])
