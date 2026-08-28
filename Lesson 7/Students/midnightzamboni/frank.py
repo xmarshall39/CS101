@@ -5,8 +5,6 @@ file = open("frankenstein.txt", "r", encoding="utf-8")
 wordCounter= {}
 
 
-s = "\\\\Hello\\r"
-
 while True:
     frankLine = file.readline()
     lineWords = frankLine.split()
