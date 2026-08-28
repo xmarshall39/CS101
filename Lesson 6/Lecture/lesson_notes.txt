@@ -56,7 +56,7 @@ x.remove(100)
 d = x[100]
 
 for employee in x.values():
-	#employee => ["fred", 3]
+	#employee => ["fred", 3]     
 	print(employee[1])
 for id in x.keys():
 	#id => 190
