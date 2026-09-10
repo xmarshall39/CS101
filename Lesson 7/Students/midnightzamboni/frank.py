@@ -9,11 +9,10 @@ while True:
     frankLine = file.readline()
     lineWords = frankLine.split()
     for word in lineWords:
-        strippedWord = word.strip(".,-'\"_ ( ) ;?!")
-        match = re.match("^[a-zA-Z0-9_]*$", word)
-        if not match:
-            continue
-        strippedWord = match.group().lower()
+        strippedWord = re.sub(r'[\W_]', '', word)
+        if strippedWord == "divine":
+            print(frankLine)
+
         if strippedWord not in wordCounter:
             wordCounter[strippedWord] = 1
         elif strippedWord in wordCounter:

@@ -4,20 +4,20 @@ Exericse 6: *The Dictionary We Have At Home*
 For today's assignment, you'll be using file parsing and dictionaries to make a small tool that allows a user
 to type a word and lookup its definition.
 
-1.) Using the following links, download dictionaryorsomething.txt and spanishdict.txt. 
+1.) Use the following link to download the English to Spanish dictionary you'll be using for this assignment
     Place it in the same folder as your solution .py file: 
-    [LINK] [LINK]
+    https://raw.githubusercontent.com/mananoreboton/en-es-en-Dic/refs/heads/master/src/main/resources/dic/en-es.xml
+   
+    - More information on the file's contents can be found here: 
+    https://github.com/mananoreboton/en-es-en-Dic
 
-2.) Use the files' contents to populate 2 dictionaries (1 for each language)
-    where each key is a word from the dictionary and each value is a definition
-    - Note that there's more information in the file than just the definition. Make sure you're pulling def only
-    - Use the string member function split() to help solve this
-        - You can split only a certain number of times: [LINK]
+2.) Use the file's contents to populate a dictionary used for looking up information on english words
+    - Note that there's more information in the file than just the definition.
     - This should only be done ONCE when the program runs
 
 
 3.) Prompt the user for input until they type "/quit" (becuase "quit" is in the dictionary)
-    - If the user types a word not in either dictionary, altert them and ask again
+    - If the user types a word not in either dictionary, alert them and ask again
     - If the user types a word present in the dictionary, show the definition and ask again
     - If the user types "/quit" say goodbye and end your program
 
@@ -30,15 +30,27 @@ to type a word and lookup its definition.
     - By typing "/history" the user should be able to see every word they've searched in the past
       and how many times they've searched it
     
-
-Bonus 1.) Add more content than just the definition.
-    - Change the dictionary's values to be a list instead of a string
-    - Make each element in the list strings containing the word's information
-    - It might look like {"Palace": ["n", "pl", "An ornate building or whatever"]}
-
-Bonus 2.) Filter the "/ih" command by starting letters according to the following format
+Bonus 1.) Filter the "/ih" command by starting letters according to the following format
     - If the user ends the "/ih" or "/interlingual-homographs" command with a "-", use all
-      characters that follow as a search filter. In this case, we want to fiter our homographs
+      characters that follow as a search filter. 
+    - For example, typing "/ih-a" will show homographs starting with 'a' and "/ih-ahz" will show
+      homographs starting with 'a', 'h', and 'z'
+
+Bonus 2.) (Potential) False Cognates
+    - There are 3 types of interlingual homophones (AFAIK). Loanwords, Cognates, and False Cognates.
+      We'd need to understand entymological origin to differentiate between loanwords and cognates, and
+      this dataset doesn't contain that. But we CAN identify likely false cognates from the provided context
+    - Your task is to find out how and label those False Cognates when printing out the IH list
+
+Bonus 3.) Better definitions and more content.
+    - In the provided file are contents from the Oxford English Dictionary:     
+    https://raw.githubusercontent.com/sujithps/Dictionary/refs/heads/master/Oxford%20English%20Dictionary.txt
+    - This dictionary contains better defintions and additional information for English words
+    - Your task is to use the Oxford definitions whenever possible instead of those provided by the EN-ES dict
+    - Additionally, please integrate at least one piece of extra information from the Oxford dict into your
+      dictionary tool. For example, language of origin. 
+      Maybe you can use this to distinguish cognates from loanwords?
+
 
 
 '''

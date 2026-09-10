@@ -5,10 +5,10 @@ Premsie: Use classes to create and modify the state of custom game objects
 
 Today, we'll be making a basic simulation of turn-based rpg combat using classes to hold game data.
 Our scope for today will be the creation of a single battle between the player and a Slime enemy.
-Each turn, the player will use input to select an action from among two options: "Attack" and "Execute"
-Attack will deal damage to the enemy based on player and enemy stats. "Execute" has a random chance to
+Each turn, the player will use input to select an action from among two options: "Strike" and "Execute"
+"Strike" will deal damage to the enemy based on player and enemy stats. "Execute" has a random chance to
 insta-kill the enemy, and is more likely to succeed when enemies have reduced health.
-Then, the enemy attacks the player, simply doing damage. If the player's health reaches 0, you lose.
+Then, the enemy "Strike"s the player, simply doing damage. If the player's health reaches 0, you lose.
 If the enemy's health reaches 0, you win. The player will always attack first.
 
 1.) For this assignment, you'll be required to create an use at minimum the following classes and 1 enum:
@@ -22,40 +22,50 @@ If the enemy's health reaches 0, you win. The player will always attack first.
         - Give some thought to what numbers you'll use to represent these values.
             - Will they all be integers? How large will the numbers be? What values should you decide first?
     
-    1c.) class Entity
+    1c.) class Entity => This is where you program the shared behavior between players and enemies
         - Parent class of the Player and Enemy
-        - Contains a Stats object property called "baseStats"
+        - Contains a Stats property called "baseStats"
         - Contains a "currentHP" property
         - Contains a "name" property
 
-        - It's constructor should take a Stats object as a parameter
+        - CONSTRUCTOR: should take a Stats object as a parameter
             - It will save the provided stats object into "baseStats"
             - Then set currentHP to the value of the stats' maxHP
 
-        - Create a member function called GetCurrentStats()
+        - MEMBER FUNCTION: GetCurrentStats()
             - For now, this will just return the saved "baseStats" value
             - Use this whenever you want to do calculations with Entity stats (like in the next func)
-
-        - Enity has function for taking damage
+        
+        - MEMBER FUNCTION: TakeDamage()
             - This function should take 2 parameters: another entity and the Action selected by opponent
-            - By comparing stats, this function will reduce currentHP depending on the Action
+            - By comparing stats, this function will reduce "currentHP" depending on the Action
                 - So attack is just a pure stat comparison
-                - Execute is a dice roll that may or may not lead to damage depending on the Enity's currentHP
+                - Execute is a dice roll that may or may not lead to damage depending on the Enity's "currentHP"
                   and Execution Chance stat
             - The formulas are up to you to decide and balance. You can always rework them later.
             - Return the amount of damage taken
+
+        - VIRTUAL FUNCTION: SelectAttack()
+            - This function will be called when we want the Entity to decide what attack it's using.
+            - However, on the Entity class, this function will do nothing
+            - We'll be utilizing function overriding to make attack selection on the player and on enemies behave differently
+
     
     1d.) class Player
         - Inherits from Entity
+        - FUNCTION IMPLEMENTATION: SelectAction()
+            - On the player, SelectAction() should ask the user what attack type to use and return it
         - Later we can add things like items to the player. For now, that's it
     
     1e.) class Enemy
         - Inherits from Entity
+        - FUNCTION IMPLEMENTATION: SelectAction()
+            - On the enemy, SelectAction() should just return an "Attack" action
         - Later, we can imagine this may contain AI calculations. For now, that's it
 
 2.) Initialize Objects and Game
-    - Create variables for the Player and Slime objects
-        - Provide the stats used to initialize them
+    - Create variables for the Player and Slime (Enemy) objects
+        - Provide the stats used to initialize them in code
     - Request the player name their character
     - Give some preamble and announce that a battle is about to begin
 
@@ -66,10 +76,10 @@ If the enemy's health reaches 0, you win. The player will always attack first.
     - On each turn do the following:
         - Show Player and Enemy HP totals
         - [Bonus] - Say something funny about the Player or Enemy randomly, perhaps based on currentHP
-        - Ask the player what Action they'd like to pick
+        - Call SelectAction() on the Player
         - Damage the enemy based on the selection and announce the damage result
         - If the enemy dies, exit the battle and declare the Player the winner (return)
-        - Otherwise, have the enemy damage the Player
+        - Otherwise, call SelectAction() on the enemy
         - If the player dies, exit the battle and declare the Enemy the winner (return)
 
 4.) Connect it all

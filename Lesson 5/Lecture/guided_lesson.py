@@ -31,7 +31,7 @@ while True:
 file.close()
 
 # with/as keywords
-with open("dummy_file.txt", "r", encoding="utf-8") as file:
+with open("files/dummy_file.txt", "r", encoding="utf-8") as file:
     all_text = file.readlines()
     for line in all_text:
         print(line.strip("\n"))
