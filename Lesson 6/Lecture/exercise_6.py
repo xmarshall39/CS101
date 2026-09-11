@@ -21,7 +21,7 @@ to type a word and lookup its definition.
     - If the user types a word present in the dictionary, show the definition and ask again
     - If the user types "/quit" say goodbye and end your program
 
-4.) Add a command to find interlingual homographs (words spelled the same in both languages)
+4.) Add a command to find interlingual homographs (words spelled the same in two languages)
     - If the user types "/ih" or "/interlingual-homographs", show them a set of all homographs
       between Spanish and English (it should print out a few hundred)
     - The set should be calculated ONCE right after importing the dictonaries
