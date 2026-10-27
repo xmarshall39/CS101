@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,12 +129,12 @@ TextureImporter:
       name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 836
-        height: 497
+        x: 323
+        y: 453
+        width: 45
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,11 +147,1419 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_2
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 453
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9bc40e06df0ce346a54e90caebaadc2
+      internalID: 2039767313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_3
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 453
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828c0dc68d4461c4fb69e15735f3bc39
+      internalID: 1133024688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 453
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6b7451be16ba8438e26e85b9cf7fc3
+      internalID: 132166129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 409
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd046d166be7434eb81121bc1939b7f
+      internalID: 92609089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_5
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 409
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a6a5e050ca6854fa6a48c08a28cc69
+      internalID: -1384403115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_6
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 409
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0e8cf37ee6b7b4ead0617a348c7379
+      internalID: 1774865192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_7
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 409
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8a643fea7994147aafb93ef7a75cd7
+      internalID: 1037985779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_8
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 365
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d69515fa9083ac4b95b6322353d1085
+      internalID: 933581628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_9
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 365
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbde7725ae343b34ab9ac6022971e7fd
+      internalID: -376587754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_10
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 365
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711c65c0189f37f4d9de29304e8266ed
+      internalID: -1946914857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_11
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 321
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558bcd8b55d147a47b50026d57be489e
+      internalID: 970013906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_12
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 321
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba4fda56fc39234e9446cd06503d75b
+      internalID: -1244389280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_13
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 277
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96013ef1de680a243a2f8d5b80766712
+      internalID: 1398538679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_14
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 288
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 598ce7a52d4008d438db3fab9a04c3f4
+      internalID: -261906115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_15
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 277
+        width: 90
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11a30244d782ba42ac96bb64a4769f3
+      internalID: 2008720459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_16
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 263
+        width: 90
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6348b45410be9418298cdc2bd7094e
+      internalID: 1825487372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_17
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 251
+        width: 48
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1264d8711f7a6d478d446044c27fa12
+      internalID: -337622339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_18
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 374
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173be047353ef7f428c9e23203f058f0
+      internalID: -1131559628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_19
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 374
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a06e8e2fe6ffa4abf66dcea7973c23
+      internalID: 1538302386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_20
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 374
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a704c1eef98e39140839811b95e79444
+      internalID: -1188129812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_21
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 374
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02b1632f63ad354fbdce0bd602bd873
+      internalID: -1454570252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_22
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 374
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8ed1814d53bd54cb229f64f514bf3c
+      internalID: 291141197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_23
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 337
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f77b1e80b95254abe4f1e0e628c004
+      internalID: -2013214853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_24
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 337
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de5a83f919187bf4d84e9807018bb5d9
+      internalID: -790479199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_25
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 337
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc873b74b82bba4c9721d6532ecfb3b
+      internalID: 738037244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_26
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 292
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd1b642a06409e43a21422795cc36ab
+      internalID: 879903997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_27
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 321
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c0ac90b67173b4baf5940c9c03581e
+      internalID: -769735061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 93
+        width: 82
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89634c30427a794295e9d002b0831c1
+      internalID: 683757353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_29
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 93
+        width: 82
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b3cc70c1bfa08459e0195624a86c8d
+      internalID: 1562684017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_30
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 93
+        width: 82
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83006dee8c0885243b3f74edc7e72ced
+      internalID: 1091314939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_31
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 93
+        width: 82
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2af4d09a63a9040b414fb6dbba3b43
+      internalID: 468312665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_32
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 93
+        width: 82
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2d78927f872434bbda8795d07b80b9
+      internalID: 64771072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_33
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9122b04897f07a047854cbac1412b385
+      internalID: -521070258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_34
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eeaa5ed007a3ed459d13608e0c8b6db
+      internalID: -857916905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_35
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 1
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c991ec81f2cfce047bc917b541d59490
+      internalID: -776150140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_36
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849a1ce42a524e4498b65f5fa9e80350
+      internalID: -2055540075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_37
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e213418cf3336d42bdfe8078d345df7
+      internalID: -1664985964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_38
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59c3e2683cefa84c9c469a0a8f4113a
+      internalID: -642631752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_39
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0373309c2674a40800cb187bec7e36
+      internalID: -1990536108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_40
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1
+        width: 66
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49385fbb0218f9b4daa69849f9d3730a
+      internalID: -1986242886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_41
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79e223fe535e0545b95d3d558dbcd03
+      internalID: 198672086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_42
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 227
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff8fc88877383247af1ae7c859b5108
+      internalID: -2096285336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_43
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 227
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06be4a0623bbed6468de411daf48172b
+      internalID: -2021691194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_44
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 121
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2761f803397d454696929ed57dad7ab
+      internalID: 642421566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_45
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 121
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6916609ca1d3534fb24da4d60357914
+      internalID: -329837888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_46
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 108
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0c869acb4e1df45aa56f38b50e0e89
+      internalID: -1605070072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_47
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 268
+        width: 192
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b131d45d74254e498fd7925d8dc1428
+      internalID: 1193358812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_48
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 249
+        width: 72
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d56b786d749674ea93a4b6eebd19b0
+      internalID: 1591823867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_49
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1
+        width: 41
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003f8a30cdf79d14ea0942ca614a5323
+      internalID: -914647412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_50
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1
+        width: 41
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62439fa999ba8748ad823020bb5e1b4
+      internalID: 1040474606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_51
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 363
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d434505f0b149f418543e876a113f84
+      internalID: 288973129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_52
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 363
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832a4134e1fb8424cb228c868a3c810b
+      internalID: 1595046818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_53
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 352
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb30cac41e4fab40a010a3075e19caa
+      internalID: -1066845008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_54
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 352
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d5b775c60a91a44870d931b14ae94a
+      internalID: -1364854619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_55
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 448
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0067e8289a94b844a1c5df87560ffc4
+      internalID: -120982743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_56
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 448
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19922a50e980a97498cb8d01fb831d09
+      internalID: -2065150423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_57
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 448
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895a5aafe527bc843b2c31e7f0615d9a
+      internalID: 619594486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_58
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 448
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886daf94bfeca4e4c9eb307c3a22f2a0
+      internalID: -1998903348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_59
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 399
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2fb924ac741af746947f440e090c4de
+      internalID: 1782289781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_60
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 399
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cb1d6d97874d741b849663c8b3520a
+      internalID: 957489859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_61
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 399
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac13e598595178844a1286af379c874b
+      internalID: 103299952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_62
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 399
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0132c7dcb5dd01844a9a02ed5e7c6f0e
+      internalID: 916847946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_63
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 350
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb44efa187cf03e41b34e27029f6622d
+      internalID: -144549004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_64
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 350
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cd0d68d21e26e488c11db72cbeb623
+      internalID: 1025827226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bf4a453c8cf26114b85694c03787f0eb
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +1567,75 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_0: -1034736965056075061
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_1: 92609089
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_10: -1946914857
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_11: 970013906
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_12: -1244389280
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_13: 1398538679
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_14: -261906115
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_15: 2008720459
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_16: 1825487372
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_17: -337622339
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_18: -1131559628
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_19: 1538302386
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_2: 2039767313
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_20: -1188129812
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_21: -1454570252
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_22: 291141197
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_23: -2013214853
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_24: -790479199
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_25: 738037244
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_26: 879903997
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_27: -769735061
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_28: 683757353
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_29: 1562684017
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_3: 1133024688
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_30: 1091314939
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_31: 468312665
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_32: 64771072
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_33: -521070258
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_34: -857916905
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_35: -776150140
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_36: -2055540075
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_37: -1664985964
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_38: -642631752
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_39: -1990536108
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_4: 132166129
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_40: -1986242886
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_41: 198672086
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_42: -2096285336
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_43: -2021691194
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_44: 642421566
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_45: -329837888
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_46: -1605070072
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_47: 1193358812
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_48: 1591823867
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_49: -914647412
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_5: -1384403115
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_50: 1040474606
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_51: 288973129
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_52: 1595046818
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_53: -1066845008
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_54: -1364854619
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_55: -120982743
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_56: -2065150423
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_57: 619594486
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_58: -1998903348
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_59: 1782289781
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_6: 1774865192
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_60: 957489859
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_61: 103299952
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_62: 916847946
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_63: -144549004
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_64: 1025827226
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_7: 1037985779
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_8: 933581628
+      Nintendo 64 - Super Smash Bros. - Miscellaneous - Character Select_9: -376587754
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
