@@ -1,0 +1,21 @@
+using UnityEngine;
+
+public class ExampleScript : MonoBehaviour
+{
+    public int number = 10;
+    public bool doIWannaUpdate = false;
+
+    float animationProgress = 0;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+}
