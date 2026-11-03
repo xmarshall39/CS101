@@ -28,9 +28,12 @@ public class CharacterSelectManager : MonoBehaviour
     public TextMeshProUGUI totalHighScoreText;
     public TextMeshProUGUI charText;
 
-    void SelectCharacter(CharacterTileInfo character)
+    public AudioSource charAnnouncementsource;
+
+    public AudioSource soundTracksource;
+    public void SelectCharacter(CharacterTileInfo character)
     {
-        if (!selectedCharacter)
+        if (false)
         {
             // open doors
             
@@ -52,8 +55,14 @@ public class CharacterSelectManager : MonoBehaviour
                     levels (PlasticGui known level by default)
                     stock amount (PlasticGui known stock by default)
             */
+            
             highScoreText.text = character.highScore.ToString();
             charText.text = character.charName;
+           
+
+            charAnnouncementsource.clip = character.charAnnounced;
+            charAnnouncementsource.Play();
+            
         }
 
     }
