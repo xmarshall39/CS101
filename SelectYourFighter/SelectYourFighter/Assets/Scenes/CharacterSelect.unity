@@ -402,7 +402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  m_Sprite: {fileID: 933581628, guid: 6154619f0250115419c662055121a8f5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -434,11 +434,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
   isLocked: 1
   lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
+  unlockedSprite: {fileID: 933581628, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: LUIGI
+  charAnnounced: {fileID: 8300000, guid: c3eba00718bcb2e4aa5bac3f55fa38f2, type: 3}
   charModel: {fileID: 0}
-  highScore: 0
+  highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
 --- !u!1 &56472905
@@ -893,6 +893,7 @@ GameObject:
   - component: {fileID: 290571187}
   - component: {fileID: 290571189}
   - component: {fileID: 290571188}
+  - component: {fileID: 290571190}
   m_Layer: 5
   m_Name: Character (5)
   m_TagString: Untagged
@@ -957,6 +958,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290571186}
   m_CullTransparentMesh: 1
+--- !u!114 &290571190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290571186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: -376587754, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: C. FALCON
+  charAnnounced: {fileID: 8300000, guid: 99dfffbf26014d647a48539321f7f40d, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1 &302280272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,6 +1374,8 @@ MonoBehaviour:
   highScoreText: {fileID: 0}
   totalHighScoreText: {fileID: 0}
   charText: {fileID: 0}
+  charAnnouncementsource: {fileID: 0}
+  soundTracksource: {fileID: 0}
 --- !u!1 &402545883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,6 +1548,7 @@ GameObject:
   - component: {fileID: 424051963}
   - component: {fileID: 424051965}
   - component: {fileID: 424051964}
+  - component: {fileID: 424051966}
   m_Layer: 5
   m_Name: Character (8)
   m_TagString: Untagged
@@ -1588,6 +1613,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424051962}
   m_CullTransparentMesh: 1
+--- !u!114 &424051966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424051962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: -1384403115, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: KIRBY
+  charAnnounced: {fileID: 8300000, guid: 426b645ab1ac85a4eaa767eba106773c, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1 &428405165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1801,7 @@ GameObject:
   - component: {fileID: 537826473}
   - component: {fileID: 537826475}
   - component: {fileID: 537826474}
+  - component: {fileID: 537826476}
   m_Layer: 5
   m_Name: Character (9)
   m_TagString: Untagged
@@ -1819,6 +1866,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537826472}
   m_CullTransparentMesh: 1
+--- !u!114 &537826476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537826472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: 1774865192, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: FOX
+  charAnnounced: {fileID: 8300000, guid: 159731b3f1632b14397c010d692c8445, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1 &583010854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,6 +2806,7 @@ GameObject:
   - component: {fileID: 933138446}
   - component: {fileID: 933138448}
   - component: {fileID: 933138447}
+  - component: {fileID: 933138449}
   m_Layer: 5
   m_Name: Character (7)
   m_TagString: Untagged
@@ -2802,6 +2871,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933138445}
   m_CullTransparentMesh: 1
+--- !u!114 &933138449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933138445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: 92609089, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: YOSHI
+  charAnnounced: {fileID: 8300000, guid: ebed639bdac5e2240a5d63248759c702, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1 &969569517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,6 +3040,7 @@ GameObject:
   - component: {fileID: 1016980535}
   - component: {fileID: 1016980537}
   - component: {fileID: 1016980536}
+  - component: {fileID: 1016980538}
   m_Layer: 5
   m_Name: Character (4)
   m_TagString: Untagged
@@ -3014,6 +3105,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016980534}
   m_CullTransparentMesh: 1
+--- !u!114 &1016980538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016980534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: -1034736965056075061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: SAMUS
+  charAnnounced: {fileID: 8300000, guid: 91d4faee18d8d9342974d9c38f8b62b5, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1 &1020445283
 GameObject:
   m_ObjectHideFlags: 0
@@ -3452,6 +3564,7 @@ GameObject:
   - component: {fileID: 1160688748}
   - component: {fileID: 1160688750}
   - component: {fileID: 1160688749}
+  - component: {fileID: 1160688751}
   m_Layer: 5
   m_Name: Character (6)
   m_TagString: Untagged
@@ -3516,6 +3629,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160688747}
   m_CullTransparentMesh: 1
+--- !u!114 &1160688751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160688747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: -1946914857, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: NESS
+  charAnnounced: {fileID: 8300000, guid: e9f6b62363c8dfd42a27874d02bf4b95, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1 &1164233700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,6 +3990,7 @@ GameObject:
   - component: {fileID: 1333619504}
   - component: {fileID: 1333619506}
   - component: {fileID: 1333619505}
+  - component: {fileID: 1333619507}
   m_Layer: 5
   m_Name: Character (2)
   m_TagString: Untagged
@@ -3920,6 +4055,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333619503}
   m_CullTransparentMesh: 1
+--- !u!114 &1333619507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333619503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: 2039767313, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: DK
+  charAnnounced: {fileID: 8300000, guid: a72fc705e8b1ed14fa36a7386f517bd2, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1 &1345223969
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,10 +4167,10 @@ MonoBehaviour:
   isLocked: 0
   lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
   unlockedSprite: {fileID: 132166129, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  charName: Mario
-  charAnnounced: {fileID: 0}
+  charName: MARIO
+  charAnnounced: {fileID: 8300000, guid: b15905a51d492604b9e4224a449065f1, type: 3}
   charModel: {fileID: 0}
-  highScore: 0
+  highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
 --- !u!1 &1351061204
@@ -4182,6 +4338,7 @@ GameObject:
   - component: {fileID: 1392476463}
   - component: {fileID: 1392476465}
   - component: {fileID: 1392476464}
+  - component: {fileID: 1392476466}
   m_Layer: 5
   m_Name: Character (11)
   m_TagString: Untagged
@@ -4246,6 +4403,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392476462}
   m_CullTransparentMesh: 1
+--- !u!114 &1392476466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392476462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: 970013906, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: PUMMELUFF
+  charAnnounced: {fileID: 8300000, guid: c2377cad11e319c46be755e498b21a16, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1 &1413887531
 GameObject:
   m_ObjectHideFlags: 0
@@ -4578,6 +4756,7 @@ GameObject:
   - component: {fileID: 1485134054}
   - component: {fileID: 1485134056}
   - component: {fileID: 1485134055}
+  - component: {fileID: 1485134057}
   m_Layer: 5
   m_Name: Character (10)
   m_TagString: Untagged
@@ -4642,6 +4821,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485134053}
   m_CullTransparentMesh: 1
+--- !u!114 &1485134057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485134053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: 1037985779, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: PIKACHU
+  charAnnounced: {fileID: 8300000, guid: 7c24ecd8a448fa349a88b54c35fef260, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1 &1591981359
 GameObject:
   m_ObjectHideFlags: 0
@@ -6392,6 +6592,7 @@ GameObject:
   - component: {fileID: 2143290705}
   - component: {fileID: 2143290707}
   - component: {fileID: 2143290706}
+  - component: {fileID: 2143290708}
   m_Layer: 5
   m_Name: Character (3)
   m_TagString: Untagged
@@ -6456,6 +6657,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143290704}
   m_CullTransparentMesh: 1
+--- !u!114 &2143290708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143290704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
+  isLocked: 0
+  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  unlockedSprite: {fileID: 1133024688, guid: 6154619f0250115419c662055121a8f5, type: 3}
+  charName: LINK
+  charAnnounced: {fileID: 8300000, guid: b4282023ed36153418ac3b55d13b1e8c, type: 3}
+  charModel: {fileID: 0}
+  highScore: 9999999
+  selectFlash: {fileID: 0}
+  stockIcon: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
