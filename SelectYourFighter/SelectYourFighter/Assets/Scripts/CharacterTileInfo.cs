@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
-public class CharacterTileInfo : MonoBehaviour
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+public class CharacterTileInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Character Tile Sprites")]
     public bool isLocked;
@@ -17,18 +19,24 @@ public class CharacterTileInfo : MonoBehaviour
     public Animator selectFlash;
     public Sprite stockIcon;
 
-    bool isSelected;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        
+        PlayerPuckMovement puck = FindAnyObjectByType<PlayerPuckMovement>();
+        puck.SetPuckState((int)PuckState.PickUp);
+
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        PlayerPuckMovement puck = FindAnyObjectByType<PlayerPuckMovement>();
+        puck.SetPuckState((int)PuckState.Hidden);
     }
 }

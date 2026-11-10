@@ -573,6 +573,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &56472905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1176,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 290571190}
           m_ObjectArgumentAssemblyTypeName: CharacterTileInfo, Assembly-CSharp
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1895,6 +1919,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &428405165
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,7 +2059,7 @@ MonoBehaviour:
   playerPuck: {fileID: 3586291}
   puckOffset: {x: 19, y: 3}
   lastMousePos: {x: 0, y: 0}
-  returnPuckAnimTime: 0.2
+  returnPuckAnimTime: 0.1
 --- !u!1 &492317072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,6 +2291,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 537826476}
           m_ObjectArgumentAssemblyTypeName: CharacterTileInfo, Assembly-CSharp
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3372,7 +3420,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3647,6 +3695,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 933138449}
           m_ObjectArgumentAssemblyTypeName: CharacterTileInfo, Assembly-CSharp
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3938,6 +3998,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 1016980538}
           m_ObjectArgumentAssemblyTypeName: CharacterTileInfo, Assembly-CSharp
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4523,6 +4595,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1164233700
 GameObject:
   m_ObjectHideFlags: 0
@@ -5006,6 +5090,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1345223969
 GameObject:
   m_ObjectHideFlags: 0
@@ -5156,6 +5252,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 1345223973}
           m_ObjectArgumentAssemblyTypeName: CharacterTileInfo, Assembly-CSharp
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5464,6 +5572,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 1392476466}
           m_ObjectArgumentAssemblyTypeName: CharacterTileInfo, Assembly-CSharp
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5939,6 +6059,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 1485134057}
           m_ObjectArgumentAssemblyTypeName: CharacterTileInfo, Assembly-CSharp
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7866,6 +7998,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 2143290708}
           m_ObjectArgumentAssemblyTypeName: CharacterTileInfo, Assembly-CSharp
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474474627}
+        m_TargetAssemblyTypeName: PlayerPuckMovement, Assembly-CSharp
+        m_MethodName: SetPuckState
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

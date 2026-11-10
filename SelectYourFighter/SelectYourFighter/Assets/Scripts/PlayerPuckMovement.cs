@@ -3,23 +3,34 @@ using UnityEngine.InputSystem;
 
 public class PlayerPuckMovement : MonoBehaviour
 {
-    public enum PuckState
-    {
-        PickUp,
-        PutDown,
-        ReturntoCursor,
-        Hidden
-    }
+
 
     public PuckState currentState = PuckState.Hidden;
-
+    
     public RectTransform playerPuck;
     public Vector2 puckOffset;
     public Vector2 lastMousePos;
     public float returnPuckAnimTime = 0.2f;
-    void SetPuckState(PuckState newState)
+    private float returnPuckAnimElapsed = 0f;
+
+    public void SetPuckState(int newState)
     {
-       
+        PuckState newStateEnum = (PuckState)newState;
+        if (currentState == PuckState.Hidden && newStateEnum == PuckState.PickUp)
+        {
+            currentState = newStateEnum;
+        }
+
+        else if (currentState == PuckState.PutDown && newStateEnum == PuckState.ReturntoCursor)
+        {
+            currentState = newStateEnum;
+        }
+
+        else if (currentState == PuckState.PickUp && (newStateEnum == PuckState.PutDown || newStateEnum == PuckState.Hidden))
+        {
+            currentState = newStateEnum;
+        }
+
     }
 
 
@@ -32,6 +43,10 @@ public class PlayerPuckMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            SetPuckState(3);
+        }
         switch (currentState)
         {
             case PuckState.Hidden:
@@ -73,11 +88,31 @@ public class PlayerPuckMovement : MonoBehaviour
                  *     cursor animates in an arc to land on its place with the cursor
                  *     continues to follow cursor while hovering over character grid
                  */
-                 
+                mousePos = Mouse.current.position.ReadValue() + puckOffset;
+                Vector2 puckDownPos = lastMousePos;
+
+                float animProgress = returnPuckAnimElapsed / returnPuckAnimTime;
+                playerPuck.anchoredPosition = Vector3.Slerp(puckDownPos, mousePos, animProgress);
+                returnPuckAnimElapsed += Time.deltaTime;
+
+                if (animProgress >= 1)
+                {
+                    returnPuckAnimElapsed = 0;
+                    currentState = PuckState.PickUp;
+                }
+
+                        
                 break;
 
             default:
                 break;
         }
     }
+}
+public enum PuckState
+{
+    Hidden,
+    PickUp,
+    PutDown,
+    ReturntoCursor
 }
