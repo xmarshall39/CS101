@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3586291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -517,6 +517,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &54632267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +537,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -596,7 +597,6 @@ GameObject:
   - component: {fileID: 56472906}
   - component: {fileID: 56472909}
   - component: {fileID: 56472908}
-  - component: {fileID: 56472907}
   m_Layer: 5
   m_Name: Flame (6)
   m_TagString: Untagged
@@ -623,27 +623,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &56472907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56472905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &56472908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,7 +769,6 @@ GameObject:
   - component: {fileID: 193641834}
   - component: {fileID: 193641837}
   - component: {fileID: 193641836}
-  - component: {fileID: 193641835}
   m_Layer: 5
   m_Name: Flame (3)
   m_TagString: Untagged
@@ -817,27 +795,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &193641835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193641833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &193641836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,6 +1081,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &290571191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,7 +1101,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1604,6 +1562,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCursor
   defaultCursorImg: {fileID: 7397997929847824407, guid: c11edf20744a41742b9f52f595fb69ef, type: 3}
+  holdPuckCursorImg: {fileID: 5671521997559185835, guid: 091d90552207b2e4089977fb72633c25, type: 3}
+  noPuckCursorImg: {fileID: -1122110798667873531, guid: 0ccc0e7c43bef784ab0f5cdbea2cf7fc, type: 3}
+  puckMovement: {fileID: 474474627}
 --- !u!1 &402545883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,7 +1576,6 @@ GameObject:
   - component: {fileID: 402545884}
   - component: {fileID: 402545887}
   - component: {fileID: 402545886}
-  - component: {fileID: 402545885}
   m_Layer: 5
   m_Name: Flame (4)
   m_TagString: Untagged
@@ -1642,27 +1602,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &402545885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402545883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &402545886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1863,6 +1802,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &424051967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,7 +1822,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2057,9 +1997,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerPuckMovement
   currentState: 0
   playerPuck: {fileID: 3586291}
-  puckOffset: {x: 19, y: 3}
+  puckOffset: {x: 12, y: 3}
   lastMousePos: {x: 0, y: 0}
-  returnPuckAnimTime: 0.1
+  returnPuckAnimTime: 0.5
 --- !u!1 &492317072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,6 +2179,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &537826477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2258,7 +2199,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2560,7 +2501,6 @@ GameObject:
   - component: {fileID: 647642605}
   - component: {fileID: 647642608}
   - component: {fileID: 647642607}
-  - component: {fileID: 647642606}
   m_Layer: 5
   m_Name: Flame (1)
   m_TagString: Untagged
@@ -2587,27 +2527,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &647642606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647642604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &647642607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2657,7 +2576,6 @@ GameObject:
   - component: {fileID: 699841479}
   - component: {fileID: 699841482}
   - component: {fileID: 699841481}
-  - component: {fileID: 699841480}
   m_Layer: 5
   m_Name: Flame (7)
   m_TagString: Untagged
@@ -2684,27 +2602,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &699841480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699841478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &699841481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3643,6 +3540,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &933138450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3662,7 +3560,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3946,6 +3844,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &1016980539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3965,7 +3864,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4025,7 +3924,6 @@ GameObject:
   - component: {fileID: 1020445284}
   - component: {fileID: 1020445287}
   - component: {fileID: 1020445286}
-  - component: {fileID: 1020445285}
   m_Layer: 5
   m_Name: Flame (10)
   m_TagString: Untagged
@@ -4052,27 +3950,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1020445285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020445283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &1020445286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4122,7 +3999,6 @@ GameObject:
   - component: {fileID: 1039926271}
   - component: {fileID: 1039926274}
   - component: {fileID: 1039926273}
-  - component: {fileID: 1039926272}
   m_Layer: 5
   m_Name: Flame (9)
   m_TagString: Untagged
@@ -4149,27 +4025,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1039926272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1039926270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &1039926273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4219,7 +4074,6 @@ GameObject:
   - component: {fileID: 1130870113}
   - component: {fileID: 1130870116}
   - component: {fileID: 1130870115}
-  - component: {fileID: 1130870114}
   m_Layer: 5
   m_Name: Flame
   m_TagString: Untagged
@@ -4246,27 +4100,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1130870114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130870112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &1130870115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4539,6 +4372,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &1160688752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4558,7 +4392,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -5034,6 +4868,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &1333619508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5053,7 +4888,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -5200,6 +5035,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &1345223974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5219,7 +5055,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -5520,6 +5356,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &1392476467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5539,7 +5376,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -6007,6 +5844,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &1485134058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6026,7 +5864,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -6086,7 +5924,6 @@ GameObject:
   - component: {fileID: 1591981360}
   - component: {fileID: 1591981363}
   - component: {fileID: 1591981362}
-  - component: {fileID: 1591981361}
   m_Layer: 5
   m_Name: Flame (5)
   m_TagString: Untagged
@@ -6113,27 +5950,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1591981361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591981359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &1591981362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6295,7 +6111,6 @@ GameObject:
   - component: {fileID: 1695790765}
   - component: {fileID: 1695790768}
   - component: {fileID: 1695790767}
-  - component: {fileID: 1695790766}
   m_Layer: 5
   m_Name: Flame (2)
   m_TagString: Untagged
@@ -6322,27 +6137,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1695790766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695790764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &1695790767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6839,7 +6633,6 @@ GameObject:
   - component: {fileID: 1801737743}
   - component: {fileID: 1801737746}
   - component: {fileID: 1801737745}
-  - component: {fileID: 1801737744}
   m_Layer: 5
   m_Name: Flame (8)
   m_TagString: Untagged
@@ -6866,27 +6659,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1801737744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801737742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &1801737745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7412,7 +7184,6 @@ GameObject:
   - component: {fileID: 1888895173}
   - component: {fileID: 1888895176}
   - component: {fileID: 1888895175}
-  - component: {fileID: 1888895174}
   m_Layer: 5
   m_Name: Flame (11)
   m_TagString: Untagged
@@ -7439,27 +7210,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1888895174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888895172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77073bd8e664d8449b845f24c431747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterTileInfo
-  isLocked: 1
-  lockedSprite: {fileID: -769735061, guid: 6154619f0250115419c662055121a8f5, type: 3}
-  unlockedSprite: {fileID: 0}
-  charName: 
-  charAnnounced: {fileID: 0}
-  charModel: {fileID: 0}
-  highScore: 0
-  selectFlash: {fileID: 0}
-  stockIcon: {fileID: 0}
 --- !u!114 &1888895175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7699,6 +7449,7 @@ GameObject:
   - component: {fileID: 2094326012}
   - component: {fileID: 2094326015}
   - component: {fileID: 2094326013}
+  - component: {fileID: 2094326017}
   m_Layer: 5
   m_Name: Grid
   m_TagString: Untagged
@@ -7769,6 +7520,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094326011}
   m_CullTransparentMesh: 1
+--- !u!114 &2094326017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094326011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e077fcaa030be34087d47ea9e08643c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridHoverDetector
+  isHoverOver: 1
 --- !u!1 &2140204153
 GameObject:
   m_ObjectHideFlags: 0
@@ -7946,6 +7710,7 @@ MonoBehaviour:
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
+  isHoverOver: 0
 --- !u!114 &2143290709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7965,7 +7730,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}

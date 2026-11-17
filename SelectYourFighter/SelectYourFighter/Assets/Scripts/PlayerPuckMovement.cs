@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class PlayerPuckMovement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerPuckMovement : MonoBehaviour
     public Vector2 lastMousePos;
     public float returnPuckAnimTime = 0.2f;
     private float returnPuckAnimElapsed = 0f;
+    private CharacterTileInfo[] buttonDetect;
 
     public void SetPuckState(int newState)
     {
@@ -37,7 +39,7 @@ public class PlayerPuckMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        buttonDetect = FindObjectsByType<CharacterTileInfo>(FindObjectsSortMode.InstanceID);
     }
 
     // Update is called once per frame
@@ -54,7 +56,6 @@ public class PlayerPuckMovement : MonoBehaviour
                  * puck is not visible while mouse is not on character Grid -> SetActive-> false;
                  */
                 playerPuck.gameObject.SetActive(false);
-
                 break;
 
 
@@ -66,7 +67,7 @@ public class PlayerPuckMovement : MonoBehaviour
                     */
                 playerPuck.gameObject.SetActive(true);
                 Vector2 mousePos = Mouse.current.position.ReadValue();
-                Debug.Log(mousePos);
+                //Debug.Log(mousePos);
                 playerPuck.anchoredPosition = mousePos + puckOffset;
                 lastMousePos = mousePos + puckOffset;
                 break;
@@ -92,16 +93,32 @@ public class PlayerPuckMovement : MonoBehaviour
                 Vector2 puckDownPos = lastMousePos;
 
                 float animProgress = returnPuckAnimElapsed / returnPuckAnimTime;
-                playerPuck.anchoredPosition = Vector3.Slerp(puckDownPos, mousePos, animProgress);
+                float lerpProgress = returnPuckAnimElapsed / (returnPuckAnimTime * 0.1f);
+                playerPuck.anchoredPosition = Vector3.Slerp(puckDownPos, mousePos, lerpProgress);
                 returnPuckAnimElapsed += Time.deltaTime;
 
-                if (animProgress >= 1)
+                bool isInsideGrid = false;
+
+                foreach (CharacterTileInfo button in buttonDetect)
                 {
-                    returnPuckAnimElapsed = 0;
-                    currentState = PuckState.PickUp;
+                    if (button.isHoverOver)
+                    {
+                        isInsideGrid = true;
+                    }
+                    
                 }
 
-                        
+                    if (animProgress >= 1 && isInsideGrid)
+                    {
+                        returnPuckAnimElapsed = 0;
+                        currentState = PuckState.PickUp;
+                    }
+                else if (animProgress >= 1 && !isInsideGrid)
+                {
+                    returnPuckAnimElapsed = 0;
+                    currentState = PuckState.Hidden;
+                }
+
                 break;
 
             default:
