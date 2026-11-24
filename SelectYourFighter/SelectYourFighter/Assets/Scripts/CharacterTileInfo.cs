@@ -55,6 +55,7 @@ public class CharacterTileInfo : MonoBehaviour, IPointerEnterHandler, IPointerEx
         else
         {
             var thisButton = GetComponent<Button>();
+            charModel.SetActive(false);
             thisButton.interactable = true;
         }
     }

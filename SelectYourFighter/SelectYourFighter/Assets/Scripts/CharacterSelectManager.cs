@@ -29,14 +29,15 @@ public class CharacterSelectManager : MonoBehaviour
     public TextMeshProUGUI charText;
 
     public AudioSource charAnnouncementsource;
-
+    public GameObject charModelRotate;
     public AudioSource soundTracksource;
     public void SelectCharacter(CharacterTileInfo character)
     {
+        charModelRotate = character.charModel;
         if (false)
         {
             // open doors
-            
+            charModelRotate.SetActive(false);
         }
 
         else
@@ -58,10 +59,12 @@ public class CharacterSelectManager : MonoBehaviour
             
             highScoreText.text = character.highScore.ToString();
             charText.text = character.charName;
-           
+
 
             charAnnouncementsource.clip = character.charAnnounced;
             charAnnouncementsource.Play();
+            charModelRotate = character.charModel;
+            charModelRotate.SetActive(true);
             
         }
 

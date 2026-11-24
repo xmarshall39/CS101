@@ -3,16 +3,17 @@ using UnityEngine;
 public class PlayerCursor : MonoBehaviour
 {
     [Header("Cursor Sprites")]
-    public Sprite defaultCursorImg;
-    public Sprite holdPuckCursorImg;
-    public Sprite noPuckCursorImg;
+    public Texture2D defaultCursorImg;
+    public Texture2D holdPuckCursorImg;
+    public Texture2D noPuckCursorImg;
 
     public PlayerPuckMovement puckMovement;
+    public Vector2 cursorOffset;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Cursor.SetCursor(defaultCursorImg.texture, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(defaultCursorImg, new Vector2 (26,0), CursorMode.Auto);
     }
 
     // Update is called once per frame
@@ -20,19 +21,19 @@ public class PlayerCursor : MonoBehaviour
     {
         if (puckMovement.currentState == PuckState.Hidden)
         {
-            Cursor.SetCursor(defaultCursorImg.texture, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(defaultCursorImg, cursorOffset, CursorMode.Auto);
             //Debug.Log("hide it");
         }
 
         else if (puckMovement.currentState == PuckState.PickUp)
         {
-            Cursor.SetCursor(holdPuckCursorImg.texture, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(holdPuckCursorImg, cursorOffset, CursorMode.Auto);
             //Debug.Log("picked up");
         }
 
         else if (puckMovement.currentState == PuckState.PutDown)
         {
-            Cursor.SetCursor(noPuckCursorImg.texture, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(noPuckCursorImg, cursorOffset, CursorMode.Auto);
             //Debug.Log("place it");
         }
     }
