@@ -5879,7 +5879,7 @@ MonoBehaviour:
   unlockedSprite: {fileID: 132166129, guid: 6154619f0250115419c662055121a8f5, type: 3}
   charName: MARIO
   charAnnounced: {fileID: 8300000, guid: b15905a51d492604b9e4224a449065f1, type: 3}
-  charModel: {fileID: 2100367904}
+  charModel: {fileID: 1730630550}
   highScore: 9999999
   selectFlash: {fileID: 0}
   stockIcon: {fileID: 0}
@@ -7103,6 +7103,11 @@ Transform:
   - {fileID: 632747529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1730630550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 01e04cc9ed4e68246b23c57067353e7d, type: 3}
+  m_PrefabInstance: {fileID: 2100367902}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733781588
 GameObject:
   m_ObjectHideFlags: 0
@@ -8795,12 +8800,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 01e04cc9ed4e68246b23c57067353e7d, type: 3}
   m_PrefabInstance: {fileID: 2100367902}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094326011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e077fcaa030be34087d47ea9e08643c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GridHoverDetector
 --- !u!1 &2140204153
 GameObject:
   m_ObjectHideFlags: 0
